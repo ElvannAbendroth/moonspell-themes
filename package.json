@@ -14,17 +14,17 @@
     "publish": "vsce publish",
     "dev:test": "nodemon --watch src --ext ts --exec \"node src/oodri-test-color-theme.ts > themes/oodri-test-color-theme.json\"",
     "dev:purple-dream": "nodemon --watch src --ext ts --exec \"node src/oodri-purple-dream-color-theme.ts > themes/oodri-purple-dream-color-theme.json\"",
-    "dev:generate-themes": "nodemon --watch src --ext ts --exec \"ts-node ./generate-themes.ts\""
+    "dev": "nodemon --watch src --ext ts --exec \"ts-node ./index.ts\""
   },
   "contributes": {
     "themes": [
       {
-        "label": "Oodri - Purple Dream",
+        "label": "Oodri Purple Dreams",
         "uiTheme": "vs-dark",
-        "path": "./themes/oodri-purple-dreams-color-theme.json.json"
+        "path": "./themes/oodri-purple-dreams-color-theme.json"
       },
       {
-        "label": "Oodri - Test",
+        "label": "Oodri Test",
         "uiTheme": "vs-dark",
         "path": "./themes/oodri-test-color-theme.json"
       }
@@ -32,6 +32,9 @@
   },
   "devDependencies": {
     "@types/node": "^22.12.0",
+    "@typescript-eslint/eslint-plugin": "^8.22.0",
+    "@typescript-eslint/parser": "^8.22.0",
+    "eslint": "^9.19.0",
     "ts-node": "^10.9.2"
   }
 }
