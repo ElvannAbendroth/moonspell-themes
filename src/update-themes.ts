@@ -11,16 +11,19 @@ export function updateThemes() {
       return
     }
 
-    const themes = files
+    const themes: { label: string; uiTheme: string; path: string }[] = []
+
+    files
       .filter(file => file.endsWith('-color-theme.json'))
-      .map(file => ({
-        label: file
-          .replace('-color-theme.json', '')
-          .replace(/-/g, ' ')
-          .replace(/\b\w/g, l => l.toUpperCase()),
-        uiTheme: 'vs-dark',
-        path: `./themes/${file}`,
-      }))
+      .forEach(file => {
+        const themePath = path.join(themesDir, file)
+        const themeData = JSON.parse(fs.readFileSync(themePath, 'utf8'))
+        themes.push({
+          label: themeData.name,
+          uiTheme: `vs-${themeData.type}`,
+          path: `./themes/${file}`,
+        })
+      })
 
     fs.readFile(packageJsonPath, 'utf8', (err, data) => {
       if (err) {
