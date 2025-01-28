@@ -1,0 +1,37 @@
+{
+  "name": "oodri-themes",
+  "displayName": "oodri-themes",
+  "description": "Beautiful Themes for VSCode",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.96.0"
+  },
+  "categories": [
+    "Themes"
+  ],
+  "scripts": {
+    "build": "vsce package",
+    "publish": "vsce publish",
+    "dev:test": "nodemon --watch src --ext ts --exec \"node src/oodri-test-color-theme.ts > themes/oodri-test-color-theme.json\"",
+    "dev:purple-dream": "nodemon --watch src --ext ts --exec \"node src/oodri-purple-dream-color-theme.ts > themes/oodri-purple-dream-color-theme.json\"",
+    "dev:generate-themes": "nodemon --watch src --ext ts --exec \"ts-node ./generate-themes.ts\""
+  },
+  "contributes": {
+    "themes": [
+      {
+        "label": "Oodri - Purple Dream",
+        "uiTheme": "vs-dark",
+        "path": "./themes/oodri-purple-dreams-color-theme.json.json"
+      },
+      {
+        "label": "Oodri - Test",
+        "uiTheme": "vs-dark",
+        "path": "./themes/oodri-test-color-theme.json"
+      }
+    ]
+  },
+  "devDependencies": {
+    "@types/node": "^22.12.0",
+    "ts-node": "^10.9.2"
+  }
+}

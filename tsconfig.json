@@ -1,0 +1,21 @@
+{
+  "compilerOptions": {
+    "target": "es6", // Specify ECMAScript target version
+    "module": "commonjs", // Specify module code generation
+    "moduleDetection": "force",
+    "skipLibCheck": true,
+    "strict": true, // Enable all strict type-checking options
+    "esModuleInterop": true, // Enables emit interoperability between CommonJS and ES Modules
+    "forceConsistentCasingInFileNames": true, // Disallow inconsistently-cased references to the same file
+    "outDir": "./dist", // Redirect output structure to the directory
+    "rootDir": "./src", // Specify the root directory of input files
+    "resolveJsonModule": true, // Include modules imported with .json extension
+    "noImplicitAny": true, // Raise error on expressions and declarations with an implied 'any' type
+    "noUnusedLocals": true, // Report errors on unused locals
+    "noUnusedParameters": true, // Report errors on unused parameters
+    "noImplicitReturns": true, // Report error when not all code paths in function return a value
+    "noFallthroughCasesInSwitch": true // Report errors for fallthrough cases in switch statement
+  },
+  "include": ["src"], // Include all files in the src directory
+  "exclude": ["node_modules", "dist"] // Exclude node_modules and dist directories
+}
