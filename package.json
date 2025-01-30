@@ -3,7 +3,7 @@
   "displayName": "Moonspell Themes",
   "description": "Ethereal ",
   "license": "MIT",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "publisher": "oodri",
   "repository": {
     "type": "git",
@@ -17,8 +17,8 @@
     "Themes"
   ],
   "scripts": {
-    "build": "vsce package",
-    "publish": "vsce publish",
+    "build": "vsce package -o ./.build",
+    "publish": "vsce publish --skip-duplicate",
     "dev": "nodemon --watch themes --watch src --ext ts --exec \"ts-node ./index.ts\""
   },
   "contributes": {
