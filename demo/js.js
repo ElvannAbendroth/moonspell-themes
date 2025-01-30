@@ -18,11 +18,11 @@ class Sale {
 
   static quebec(price) {
     // this is a comment
-    return price + price * 7.5 / 100
+    return price + (price * 7.5) / 100
   }
 
   static fedtax(price) {
-    return price + price * 5 / 100
+    return price + (price * 5) / 100
   }
 }
 
@@ -36,28 +36,29 @@ getPrice()
 //deeply nested
 
 async function asyncCall() {
-  var result = await resolveAfter2Seconds();
+  var result = await resolveAfter2Seconds()
 }
 
 const options = {
   connections: {
-    compression: false
-  }
+    compression: false,
+  },
 }
 
 for (let i = 0; i < 10; i++) {
-  continue;
+  continue
 }
 
-if (true) { }
+if (true) {
+}
 
-while (true) { }
+while (true) {}
 
 switch (2) {
   case 2:
-    break;
+    break
   default:
-    break;
+    break
 }
 
 class EditFishForm extends Component {
@@ -67,7 +68,7 @@ class EditFishForm extends Component {
     index: PropTypes.string,
     fish: PropTypes.shape({
       image: PropTypes.string,
-      name: PropTypes.string.isRequired
-    })
+      name: PropTypes.string.isRequired,
+    }),
   }
 }
