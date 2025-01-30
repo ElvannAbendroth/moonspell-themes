@@ -14,34 +14,25 @@ const colors = {
     default: '#1b1f32',
     highlight: '#1b1f32',
   },
-  primaryDark: '#4961da',
-  primary: '#4961da',
-  primaryLight: '#8b9efd',
+  primary: {
+    default: '#4961da',
+    muted: '#516aec',
+    highlight: '#8b9efd',
+    foreground: '#b8cdfe',
+  },
   warn: '#627af4',
-  hoverBackground: '#516aec',
-  listInvalidItemForeground: '#7289fd',
   color1: '#a5b3fe',
   color4: '#82AAFF',
-  color5: '#7289fd',
   accent1: '#99e9ff',
   accent2: '#ea96f2',
   info: '#67c9e4',
   untracked: '#289dbd',
   editorWidgetResizeBorder: '#4db0cb',
-  supportClassComponent: '#33abcc',
+  supportClassComponent: '#4db0cb',
   supportTypePropertyNameJson: '#4db0cb',
+  color3: '#4db0cb',
   color2: '#86e0f9',
-  color3: '#5cbcd6',
   error: '#ec407a',
-  editorBracketMatchBorder: '#51587b',
-  editorIndentGuideActive: '#51587b',
-  editorGutterBackground: '#5e6587',
-  peekViewResultLineForeground: '#51587b',
-  sourceCsMetaPreprocessor: '#51587b',
-  menuForeground: '#c3cdfe',
-  notificationCenterHeaderForeground: '#c3cdfe',
-  notificationForeground: '#c3cdfe',
-  pickerGroupForeground: '#c3cdfe',
   scrollbarShadow: '#13152000',
   scrollbarSliderActiveBackground: '#51587b11',
   scrollbarSliderBackground: '#444b6f33',
@@ -56,17 +47,17 @@ const theme = {
     'activityBar.background': colors.background.default,
     'activityBar.border': colors.border.default,
     'activityBar.foreground': colors.foreground.default,
-    'activityBarBadge.background': colors.primary,
+    'activityBarBadge.background': colors.primary.default,
     'activityBarBadge.foreground': colors.foreground.default,
-    'badge.background': colors.primary,
+    'badge.background': colors.primary.default,
     'badge.foreground': colors.foreground.default,
     'breadcrumb.activeSelectionForeground': colors.foreground.muted,
     'breadcrumb.focusForeground': colors.foreground.muted,
     'breadcrumb.foreground': colors.foreground.inactive,
     'breadcrumbPicker.background': colors.background.default,
-    'button.background': colors.primary,
+    'button.background': colors.primary.default,
     'button.foreground': colors.foreground.default,
-    'button.hoverBackground': colors.hoverBackground,
+    'button.hoverBackground': colors.primary.muted,
     'debugExceptionWidget.background': colors.background.default,
     'debugExceptionWidget.border': colors.background.default,
     'debugToolBar.background': colors.background.default,
@@ -79,9 +70,9 @@ const theme = {
     'dropdown.foreground': colors.info,
     'editor.background': colors.background.default,
     'editor.findMatchBackground': colors.background.default,
-    'editor.findMatchBorder': colors.primary,
-    'editor.findMatchHighlightBackground': `${colors.primary}33`,
-    'editor.findMatchHighlightBorder': `${colors.primary}99`,
+    'editor.findMatchBorder': colors.primary.default,
+    'editor.findMatchHighlightBackground': `${colors.primary.default}33`,
+    'editor.findMatchHighlightBorder': `${colors.primary.default}99`,
     'editor.foreground': colors.foreground.default,
     'editor.hoverHighlightBackground': colors.background.highlight + '99',
     'editor.inactiveSelectionBackground': `${colors.background.active}99`,
@@ -94,9 +85,9 @@ const theme = {
     'editor.wordHighlightStrongBackground': colors.background.active + '99',
     'editorBracketMatch.background': colors.background.default,
     'editorBracketMatch.border': colors.border.default,
-    'editorCodeLens.foreground': `${colors.primary}77`,
+    'editorCodeLens.foreground': `${colors.primary.default}77`,
     'editorCursor.background': colors.background.default,
-    'editorCursor.foreground': colors.color5,
+    'editorCursor.foreground': colors.primary.highlight,
     'editorError.foreground': colors.error,
     'editorGroup.border': colors.background.default,
     'editorGroup.dropBackground': `${colors.info}40`,
@@ -109,21 +100,21 @@ const theme = {
     'editorGutter.deletedBackground': colors.error,
     'editorGutter.modifiedBackground': colors.warn,
     'editorHoverWidget.background': colors.background.highlight,
-    'editorHoverWidget.border': colors.primary,
+    'editorHoverWidget.border': colors.primary.default,
     'editorHoverWidget.foreground': colors.foreground.default,
-    'editorIndentGuide.activeBackground1': colors.editorIndentGuideActive,
+    'editorIndentGuide.activeBackground1': colors.foreground.muted,
     'editorIndentGuide.background1': colors.background.active,
     'editorInlayHint.background': colors.background.highlight + '00',
-    'editorInlayHint.foreground': `${colors.primary}99`,
+    'editorInlayHint.foreground': `${colors.primary.default}99`,
     'editorInlayHint.parameterBackground': colors.background.highlight + '00',
-    'editorInlayHint.parameterForeground': `${colors.primary}99`,
+    'editorInlayHint.parameterForeground': `${colors.primary.default}99`,
     'editorInlayHint.typeBackground': colors.background.highlight + '00',
-    'editorInlayHint.typeForeground': `${colors.primary}99`,
+    'editorInlayHint.typeForeground': `${colors.primary.default}99`,
     'editorLineNumber.activeForeground': colors.foreground.default,
-    'editorLineNumber.foreground': colors.editorIndentGuideActive,
-    'editorLink.activeForeground': colors.primary,
-    'editorMarkerNavigation.background': colors.editorGutterBackground,
-    'editorMarkerNavigationError.background': colors.primary,
+    'editorLineNumber.foreground': colors.foreground.muted,
+    'editorLink.activeForeground': colors.primary.default,
+    'editorMarkerNavigation.background': colors.foreground.muted,
+    'editorMarkerNavigationError.background': colors.primary.default,
     'editorMarkerNavigationWarning.background': colors.warn,
     'editorOverviewRuler.addedForeground': `${colors.info}99`,
     'editorOverviewRuler.border': colors.scrollbarShadow,
@@ -135,10 +126,10 @@ const theme = {
     'editorOverviewRuler.findMatchForeground': colors.scrollbarShadow,
     'editorOverviewRuler.incomingContentForeground': colors.error,
     'editorOverviewRuler.infoForeground': colors.scrollbarShadow,
-    'editorOverviewRuler.modifiedForeground': `${colors.primary}99`,
+    'editorOverviewRuler.modifiedForeground': `${colors.primary.default}99`,
     'editorOverviewRuler.rangeHighlightForeground': colors.scrollbarShadow,
     'editorOverviewRuler.selectionHighlightForeground': colors.scrollbarShadow,
-    'editorOverviewRuler.warningForeground': colors.primary,
+    'editorOverviewRuler.warningForeground': colors.primary.default,
     'editorOverviewRuler.wordHighlightForeground': colors.scrollbarShadow,
     'editorOverviewRuler.wordHighlightStrongForeground': colors.scrollbarShadow,
     'editorRuler.foreground': colors.foreground.default,
@@ -148,21 +139,21 @@ const theme = {
     'editorSuggestWidget.highlightForeground': colors.accent1,
     'editorSuggestWidget.selectedBackground': colors.background.default,
     'editorWarning.foreground': colors.warn,
-    'editorWhitespace.foreground': colors.editorGutterBackground,
+    'editorWhitespace.foreground': colors.foreground.muted,
     'editorWidget.background': colors.background.default,
     'editorWidget.border': colors.background.default,
     'editorWidget.resizeBorder': colors.editorWidgetResizeBorder,
-    errorForeground: colors.primary,
-    'extensionButton.prominentBackground': colors.primary,
+    errorForeground: colors.primary.default,
+    'extensionButton.prominentBackground': colors.primary.default,
     'extensionButton.prominentForeground': colors.foreground.default,
-    'extensionButton.prominentHoverBackground': colors.primary,
+    'extensionButton.prominentHoverBackground': colors.primary.default,
     focusBorder: colors.scrollbarShadow,
     foreground: colors.foreground.muted,
     'gitDecoration.addedResourceForeground': colors.info,
     'gitDecoration.conflictingResourceForeground': `${colors.error}99`,
     'gitDecoration.deletedResourceForeground': colors.error,
-    'gitDecoration.ignoredResourceForeground': colors.editorIndentGuideActive,
-    'gitDecoration.modifiedResourceForeground': colors.primary,
+    'gitDecoration.ignoredResourceForeground': colors.foreground.muted,
+    'gitDecoration.modifiedResourceForeground': colors.primary.default,
     'gitDecoration.untrackedResourceForeground': colors.untracked,
     'icon.foreground': colors.foreground.muted,
     'input.background': colors.background.highlight,
@@ -170,16 +161,16 @@ const theme = {
     'input.foreground': colors.foreground.highlight,
     'input.placeholderForeground': colors.foreground.muted,
     'inputOption.activeBorder': colors.info,
-    'inputValidation.errorBackground': colors.primary,
-    'inputValidation.errorBorder': colors.primary,
+    'inputValidation.errorBackground': colors.primary.default,
+    'inputValidation.errorBorder': colors.primary.default,
     'inputValidation.infoBackground': colors.background.highlight,
-    'inputValidation.infoBorder': colors.primary,
+    'inputValidation.infoBorder': colors.primary.default,
     'inputValidation.warningBackground': colors.warn,
     'inputValidation.warningBorder': colors.warn,
     'list.activeSelectionBackground': colors.background.highlight,
     'list.activeSelectionForeground': colors.foreground.default,
     'list.dropBackground': `${colors.info}40`,
-    'list.errorForeground': colors.color5,
+    'list.errorForeground': colors.primary.highlight,
     'list.focusBackground': colors.background.active,
     'list.focusForeground': colors.info,
     'list.highlightForeground': colors.info,
@@ -187,22 +178,22 @@ const theme = {
     'list.hoverForeground': colors.info,
     'list.inactiveSelectionBackground': colors.background.default,
     'list.inactiveSelectionForeground': colors.foreground.default,
-    'list.invalidItemForeground': colors.listInvalidItemForeground,
-    'list.warningForeground': colors.color5,
+    'list.invalidItemForeground': colors.primary.highlight,
+    'list.warningForeground': colors.primary.highlight,
     'menu.background': colors.background.default,
     'menu.foreground': `${colors.foreground.default}cc`,
     'menu.selectionBackground': colors.background.highlight,
     'menu.selectionForeground': colors.info,
-    'menu.separatorBackground': colors.primary,
+    'menu.separatorBackground': colors.primary.default,
     'menubar.selectionBackground': colors.background.highlight,
     'merge.currentHeaderBackground': colors.foreground.muted,
     'merge.incomingHeaderBackground': colors.primary + '99',
     'notificationCenterHeader.background': colors.background.highlight,
-    'notificationCenterHeader.foreground': colors.notificationCenterHeaderForeground,
+    'notificationCenterHeader.foreground': colors.foreground.highlight,
     'notificationLink.foreground': colors.info,
     'notifications.background': colors.background.default,
-    'notifications.border': `${colors.primary}99`,
-    'notifications.foreground': colors.notificationForeground,
+    'notifications.border': `${colors.primary.default}99`,
+    'notifications.foreground': colors.foreground.highlight,
     'panel.background': colors.background.default,
     'panel.border': colors.background.default,
     'panelTitle.activeBorder': colors.foreground.default,
@@ -210,18 +201,18 @@ const theme = {
     'panelTitle.inactiveForeground': colors.foreground.muted,
     'peekView.border': colors.background.active,
     'peekViewEditor.background': colors.background.default,
-    'peekViewEditor.matchHighlightBackground': colors.primary,
+    'peekViewEditor.matchHighlightBackground': colors.primary.default,
     'peekViewResult.background': colors.background.highlight,
     'peekViewResult.fileForeground': colors.foreground.default,
-    'peekViewResult.lineForeground': colors.peekViewResultLineForeground,
-    'peekViewResult.matchHighlightBackground': colors.primary,
+    'peekViewResult.lineForeground': colors.foreground.muted,
+    'peekViewResult.matchHighlightBackground': colors.primary.default,
     'peekViewResult.selectionBackground': colors.background.active,
     'peekViewResult.selectionForeground': colors.foreground.default,
     'peekViewTitle.background': colors.background.default,
     'peekViewTitleDescription.foreground': colors.foreground.muted,
     'peekViewTitleLabel.foreground': colors.foreground.default,
     'pickerGroup.border': colors.background.default,
-    'pickerGroup.foreground': colors.pickerGroupForeground,
+    'pickerGroup.foreground': colors.foreground.highlight,
     'progressBar.background': colors.warn,
     'scrollbar.shadow': colors.scrollbarShadow,
     'scrollbarSlider.activeBackground': colors.scrollbarSliderActiveBackground,
@@ -233,7 +224,7 @@ const theme = {
     'settings.textInputBorder': colors.background.highlight,
     'sideBar.background': colors.background.default,
     'sideBar.border': colors.background.default,
-    'sideBar.dropBackground': `${colors.primaryLight}40`,
+    'sideBar.dropBackground': `${colors.primary.highlight}40`,
     'sideBar.foreground': colors.foreground.muted,
     'sideBarSectionHeader.background': colors.background.default,
     'sideBarSectionHeader.foreground': colors.foreground.default,
@@ -262,27 +253,27 @@ const theme = {
     'tab.unfocusedInactiveForeground': colors.foreground.muted,
     'terminal.ansiBlack': colors.background.active,
     'terminal.ansiBlue': colors.warn,
-    'terminal.ansiBrightBlack': colors.primary,
+    'terminal.ansiBrightBlack': colors.primary.default,
     'terminal.ansiBrightBlue': colors.info,
     'terminal.ansiBrightCyan': colors.info,
     'terminal.ansiBrightGreen': colors.info,
-    'terminal.ansiBrightMagenta': colors.color5,
+    'terminal.ansiBrightMagenta': colors.primary.highlight,
     'terminal.ansiBrightRed': colors.warn,
     'terminal.ansiBrightWhite': colors.foreground.default,
     'terminal.ansiBrightYellow': colors.foreground.default,
     'terminal.ansiCyan': colors.info,
     'terminal.ansiGreen': colors.info,
-    'terminal.ansiMagenta': colors.color5,
-    'terminal.ansiRed': colors.primary,
+    'terminal.ansiMagenta': colors.primary.highlight,
+    'terminal.ansiRed': colors.primary.default,
     'terminal.ansiWhite': colors.foreground.default,
     'terminal.ansiYellow': colors.warn,
     'terminal.background': colors.background.default,
     'terminal.foreground': colors.foreground.default,
-    'terminal.selectionBackground': `${colors.primary}33`,
+    'terminal.selectionBackground': `${colors.primary.default}33`,
     'terminalCursor.background': colors.background.highlight,
-    'terminalCursor.foreground': colors.primary,
-    'textLink.activeForeground': colors.primary,
-    'textLink.foreground': colors.primary,
+    'terminalCursor.foreground': colors.primary.default,
+    'textLink.activeForeground': colors.primary.default,
+    'textLink.foreground': colors.primary.default,
     'titleBar.activeBackground': colors.background.default,
     'titleBar.activeForeground': `${colors.foreground.default}cc`,
     'titleBar.inactiveBackground': colors.background.default,
@@ -318,19 +309,19 @@ const theme = {
     {
       scope: 'constant.language.boolean',
       settings: {
-        foreground: colors.primary,
+        foreground: colors.primary.default,
       },
     },
     {
       scope: ['constant.language.null', 'constant.language.undefined'],
       settings: {
-        foreground: `${colors.primary}99`,
+        foreground: `${colors.primary.default}99`,
       },
     },
     {
       scope: 'constant.numeric',
       settings: {
-        foreground: colors.primary,
+        foreground: colors.primary.default,
       },
     },
     {
@@ -349,7 +340,7 @@ const theme = {
     {
       scope: 'keyword, modifier, variable.language.this, support.type.object, constant.language',
       settings: {
-        foreground: colors.primary,
+        foreground: colors.primary.default,
         fontStyle: 'italic',
       },
     },
@@ -362,13 +353,13 @@ const theme = {
     {
       scope: 'keyword, modifier, variable.language.this, support.type.object, constant.language',
       settings: {
-        foreground: colors.primary,
+        foreground: colors.primary.default,
       },
     },
     {
       scope: 'entity.name.function, support.function',
       settings: {
-        foreground: colors.color5,
+        foreground: colors.primary.highlight,
       },
     },
     {
@@ -380,7 +371,7 @@ const theme = {
     {
       scope: 'support.module, support.node',
       settings: {
-        foreground: colors.primary,
+        foreground: colors.primary.default,
         fontStyle: 'italic',
       },
     },
@@ -418,13 +409,13 @@ const theme = {
     {
       scope: 'entity.name, entity.name.type.class, support.type, support.class, meta.use',
       settings: {
-        foreground: colors.primaryLight,
+        foreground: colors.primary.highlight,
       },
     },
     {
       scope: 'variable.object.property, meta.field.declaration entity.name.function',
       settings: {
-        foreground: colors.color5,
+        foreground: colors.primary.highlight,
       },
     },
     {
@@ -443,7 +434,7 @@ const theme = {
       scope:
         'template.expression.begin, template.expression.end, punctuation.definition.template-expression.begin, punctuation.definition.template-expression.end',
       settings: {
-        foreground: colors.primary,
+        foreground: colors.primary.default,
       },
     },
     {
@@ -461,13 +452,13 @@ const theme = {
     {
       scope: 'meta.object-literal.key, meta.object-literal.key string, support.type.property-name.json',
       settings: {
-        foreground: colors.primaryLight,
+        foreground: colors.primary.highlight,
       },
     },
     {
       scope: 'constant.language.json',
       settings: {
-        foreground: colors.primary,
+        foreground: colors.primary.default,
       },
     },
     {
@@ -491,7 +482,7 @@ const theme = {
     {
       scope: 'support.type.property-name.css',
       settings: {
-        foreground: colors.primaryLight,
+        foreground: colors.primary.highlight,
       },
     },
     {
@@ -509,7 +500,7 @@ const theme = {
     {
       scope: 'entity.other.attribute-name',
       settings: {
-        foreground: colors.primaryLight,
+        foreground: colors.primary.highlight,
         fontStyle: 'italic',
       },
     },
@@ -534,13 +525,13 @@ const theme = {
     {
       scope: 'text.html.markdown meta.link.inline, meta.link.reference',
       settings: {
-        foreground: colors.primary,
+        foreground: colors.primary.default,
       },
     },
     {
       scope: 'text.html.markdown beginning.punctuation.definition.list',
       settings: {
-        foreground: colors.primary,
+        foreground: colors.primary.default,
       },
     },
     {
@@ -560,7 +551,7 @@ const theme = {
     {
       scope: 'markup.underline.link.image',
       settings: {
-        foreground: colors.primary,
+        foreground: colors.primary.default,
         fontStyle: 'bold',
       },
     },
@@ -605,7 +596,7 @@ const theme = {
     {
       scope: 'markup.inline.raw.string.markdown',
       settings: {
-        foreground: colors.primary,
+        foreground: colors.primary.default,
       },
     },
     {
@@ -623,37 +614,37 @@ const theme = {
     {
       scope: 'source.cs meta.class.identifier storage.type',
       settings: {
-        foreground: colors.primary,
+        foreground: colors.primary.default,
       },
     },
     {
       scope: 'source.cs meta.method.identifier entity.name.function',
       settings: {
-        foreground: colors.primary,
+        foreground: colors.primary.default,
       },
     },
     {
       scope: 'source.cs meta.method-call meta.method, source.cs entity.name.function',
       settings: {
-        foreground: colors.primaryLight,
+        foreground: colors.primary.highlight,
       },
     },
     {
       scope: 'source.cs storage.type',
       settings: {
-        foreground: colors.primaryLight,
+        foreground: colors.primary.highlight,
       },
     },
     {
       scope: 'source.cs meta.method.return-type',
       settings: {
-        foreground: colors.primaryLight,
+        foreground: colors.primary.highlight,
       },
     },
     {
       scope: 'source.cs meta.preprocessor',
       settings: {
-        foreground: colors.sourceCsMetaPreprocessor,
+        foreground: colors.foreground.muted,
       },
     },
     {
@@ -683,7 +674,7 @@ const theme = {
     {
       scope: 'source.python meta.member.access.python',
       settings: {
-        foreground: colors.primary,
+        foreground: colors.primary.default,
       },
     },
     {
@@ -726,7 +717,7 @@ const theme = {
     {
       scope: ['markup.quote'],
       settings: {
-        foreground: colors.primary,
+        foreground: colors.primary.default,
         fontStyle: 'italic',
       },
     },
@@ -745,7 +736,7 @@ const theme = {
     {
       scope: ['meta.structure.dictionary.json support.type.property-name.json'],
       settings: {
-        foreground: colors.color5,
+        foreground: colors.primary.highlight,
       },
     },
     {
@@ -753,7 +744,7 @@ const theme = {
         'meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json support.type.property-name.json',
       ],
       settings: {
-        foreground: colors.color5,
+        foreground: colors.primary.highlight,
       },
     },
     {
@@ -777,7 +768,7 @@ const theme = {
         'meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.value.json meta.structure.dictionary.value.json meta.structure.dictionary.value.json meta.structure.dictionary.value.json meta.structure.dictionary.value.json meta.structure.dictionary.value.json meta.structure.dictionary.value.json meta.structure.dictionary.value.json support.type.property-name.json',
       ],
       settings: {
-        foreground: `${colors.primary}99`,
+        foreground: `${colors.primary.default}99`,
       },
     },
     {
@@ -785,7 +776,7 @@ const theme = {
         'meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.value.json meta.structure.dictionary.value.json meta.structure.dictionary.value.json meta.structure.dictionary.value.json meta.structure.dictionary.value.json meta.structure.dictionary.value.json meta.structure.dictionary.value.json meta.structure.dictionary.value.json meta.structure.dictionary.value.json meta.structure.dictionary.value.json support.type.property-name.json',
       ],
       settings: {
-        foreground: colors.primaryLight,
+        foreground: colors.primary.highlight,
       },
     },
     {
@@ -821,7 +812,7 @@ const theme = {
     {
       scope: 'token.warn-token',
       settings: {
-        foreground: colors.color5,
+        foreground: colors.primary.highlight,
       },
     },
     {
