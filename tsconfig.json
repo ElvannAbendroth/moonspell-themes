@@ -18,6 +18,6 @@
     "noImplicitReturns": false, // Report error when not all code paths in function return a value
     "noFallthroughCasesInSwitch": true // Report errors for fallthrough cases in switch statement
   },
-  "include": ["themes/**/*", "src/**/*"],
-  "exclude": ["node_modules", "dist"] // Exclude node_modules and dist directories
+  "include": ["**/*"],
+  "exclude": ["node_modules", "dist", "./archives/**/*"] // Exclude node_modules and dist directories
 }

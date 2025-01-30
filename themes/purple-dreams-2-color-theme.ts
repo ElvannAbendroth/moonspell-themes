@@ -16,26 +16,38 @@ const colors = {
     highlight: '#1b1f32',
   },
   primary: {
-    default: '#4961da',
-    muted: '#516aec',
-    highlight: '#8b9efd',
+    default: '#7966E6',
+    muted: '#634FD5',
+    highlight: '#9889F2',
     foreground: '#b8cdfe',
   },
   git: {
+    modified: '#9889F2',
     untracked: '#24dbc3',
     added: '#67c9e4',
     ignored: '#b8cdfe77',
-    modified: '#627af4',
     error: '#ea96f2',
     deleted: '#ea96f2',
     conflict: '#e19981',
   },
-  warn: '#627af4',
-  info: '#67c9e4',
-  untracked: '#24dbc3',
-  color2: '#86e0f9',
-  accent2: '#ea96f2',
-  error: '#ec407a',
+  rainbow: {
+    purple: '#B396F9',
+    blue: '#8EA7FF',
+    cyan: '#67c9e4',
+    green: '#8EA7FF',
+    yellow: '#B396F9',
+    orange: '#e19981',
+    pink: '#ea96f2',
+    red: '#ea96f2',
+    white: '#E1E1E1',
+    black: '#B8B8B8',
+  },
+  utility: {
+    info: '#67c9e4',
+    success: '#24dbc3',
+    warn: '#e19981',
+    error: '#ea96f2',
+  },
   debug: '#fcba03',
 }
 
@@ -54,29 +66,29 @@ const theme = {
     'breadcrumb.focusForeground': colors.foreground.muted,
     'breadcrumb.foreground': colors.foreground.inactive,
     'breadcrumbPicker.background': colors.background.default,
-    'button.background': colors.primary.default,
-    'button.foreground': colors.foreground.default,
-    'button.hoverBackground': colors.primary.muted,
+    'button.background': colors.primary.muted,
+    'button.foreground': colors.primary.foreground,
+    'button.hoverBackground': colors.primary.default,
     'debugExceptionWidget.background': colors.background.default,
-    'debugExceptionWidget.border': colors.background.default,
+    'debugExceptionWidget.border': colors.border.default,
     'debugToolBar.background': colors.background.default,
     'debugToolBar.border': colors.border.highlight,
     descriptionForeground: colors.foreground.default,
-    'diffEditor.insertedTextBackground': `${colors.info}10`,
-    'diffEditor.removedTextBackground': `${colors.error}10`,
+    'diffEditor.insertedTextBackground': `${colors.utility.info}10`,
+    'diffEditor.removedTextBackground': `${colors.utility.error}10`,
     'dropdown.background': colors.background.highlight,
     'dropdown.border': colors.background.default,
-    'dropdown.foreground': colors.info,
+    'dropdown.foreground': colors.utility.info,
     'editor.background': colors.background.default,
     'editor.findMatchBackground': colors.background.default,
-    'editor.findMatchBorder': colors.primary.default,
+    'editor.findMatchBorder': colors.border.default,
     'editor.findMatchHighlightBackground': `${colors.primary.default}33`,
     'editor.findMatchHighlightBorder': `${colors.primary.default}99`,
     'editor.foreground': colors.foreground.default,
     'editor.hoverHighlightBackground': colors.background.highlight + '99',
     'editor.inactiveSelectionBackground': `${colors.background.active}99`,
     'editor.lineHighlightBackground': `${colors.background.active}99`,
-    'editor.lineHighlightBorder': colors.background.highlight,
+    'editor.lineHighlightBorder': colors.border.highlight,
     'editor.rangeHighlightBackground': colors.background.active + '99',
     'editor.selectionBackground': colors.background.highlight,
     'editor.selectionHighlightBackground': colors.background.active + '99',
@@ -87,17 +99,17 @@ const theme = {
     'editorCodeLens.foreground': `${colors.primary.default}77`,
     'editorCursor.background': colors.background.default,
     'editorCursor.foreground': colors.primary.highlight,
-    'editorError.foreground': colors.error,
-    'editorGroup.border': colors.background.default,
-    'editorGroup.dropBackground': `${colors.info}40`,
+    'editorError.foreground': colors.utility.error,
+    'editorGroup.border': colors.border.default,
+    'editorGroup.dropBackground': `${colors.utility.info}40`,
     'editorGroup.emptyBackground': colors.background.default,
     'editorGroupHeader.noTabsBackground': colors.background.default,
     'editorGroupHeader.tabsBackground': colors.background.default,
-    'editorGroupHeader.tabsBorder': colors.background.default,
-    'editorGutter.addedBackground': colors.info,
+    'editorGroupHeader.tabsBorder': colors.border.default,
+    'editorGutter.addedBackground': colors.utility.info,
     'editorGutter.background': `${colors.background.default}64`,
-    'editorGutter.deletedBackground': colors.error,
-    'editorGutter.modifiedBackground': colors.warn,
+    'editorGutter.deletedBackground': colors.utility.error,
+    'editorGutter.modifiedBackground': colors.primary.default,
     'editorHoverWidget.background': colors.background.highlight,
     'editorHoverWidget.border': colors.primary.default,
     'editorHoverWidget.foreground': colors.foreground.default,
@@ -114,33 +126,33 @@ const theme = {
     'editorLink.activeForeground': colors.primary.default,
     'editorMarkerNavigation.background': colors.foreground.muted,
     'editorMarkerNavigationError.background': colors.primary.default,
-    'editorMarkerNavigationWarning.background': colors.warn,
-    'editorOverviewRuler.addedForeground': `${colors.info}99`,
+    'editorMarkerNavigationWarning.background': colors.utility.warn,
+    'editorOverviewRuler.addedForeground': `${colors.utility.info}99`,
     'editorOverviewRuler.border': colors.border.highlight,
     'editorOverviewRuler.bracketMatchForeground': colors.primary.default,
     'editorOverviewRuler.commonContentForeground': colors.debug,
     'editorOverviewRuler.currentContentForeground': colors.debug,
-    'editorOverviewRuler.deletedForeground': `${colors.primary}99`,
-    'editorOverviewRuler.errorForeground': colors.error,
-    'editorOverviewRuler.infoForeground': colors.info,
-    'editorOverviewRuler.warningForeground': colors.warn,
-    'editorOverviewRuler.findMatchForeground': colors.border.default,
+    'editorOverviewRuler.deletedForeground': `${colors.primary.default}99`,
+    'editorOverviewRuler.errorForeground': colors.utility.error,
+    'editorOverviewRuler.infoForeground': colors.utility.info,
+    'editorOverviewRuler.warningForeground': colors.utility.warn,
+    'editorOverviewRuler.findMatchForeground': colors.border.default + '99',
     'editorOverviewRuler.incomingContentForeground': colors.debug,
     'editorOverviewRuler.modifiedForeground': `${colors.primary.default}99`,
-    'editorOverviewRuler.rangeHighlightForeground': colors.debug,
-    'editorOverviewRuler.selectionHighlightForeground': colors.debug,
-    'editorOverviewRuler.wordHighlightForeground': colors.debug,
-    'editorOverviewRuler.wordHighlightStrongForeground': colors.debug,
+    'editorOverviewRuler.rangeHighlightForeground': colors.debug + '99',
+    'editorOverviewRuler.selectionHighlightForeground': colors.debug + '99',
+    'editorOverviewRuler.wordHighlightForeground': colors.debug + '99',
+    'editorOverviewRuler.wordHighlightStrongForeground': colors.debug + '99',
     'editorRuler.foreground': colors.foreground.default,
     'editorSuggestWidget.background': colors.background.active,
-    'editorSuggestWidget.border': colors.background.default,
+    'editorSuggestWidget.border': colors.border.default,
     'editorSuggestWidget.foreground': colors.foreground.default,
     'editorSuggestWidget.highlightForeground': colors.foreground.highlight,
     'editorSuggestWidget.selectedBackground': colors.background.default,
-    'editorWarning.foreground': colors.warn,
+    'editorWarning.foreground': colors.utility.warn,
     'editorWhitespace.foreground': colors.foreground.muted,
     'editorWidget.background': colors.background.default,
-    'editorWidget.border': colors.background.default,
+    'editorWidget.border': colors.border.default,
     'editorWidget.resizeBorder': colors.primary.muted,
     errorForeground: colors.primary.default,
     'extensionButton.prominentBackground': colors.primary.default,
@@ -156,25 +168,25 @@ const theme = {
     'gitDecoration.untrackedResourceForeground': colors.git.untracked,
     'icon.foreground': colors.foreground.muted,
     'input.background': colors.background.highlight,
-    'input.border': colors.background.default,
+    'input.border': colors.border.default,
     'input.foreground': colors.foreground.highlight,
     'input.placeholderForeground': colors.foreground.muted,
-    'inputOption.activeBorder': colors.info,
+    'inputOption.activeBorder': colors.utility.info,
     'inputValidation.errorBackground': colors.primary.default,
     'inputValidation.errorBorder': colors.primary.default,
     'inputValidation.infoBackground': colors.background.highlight,
     'inputValidation.infoBorder': colors.primary.default,
-    'inputValidation.warningBackground': colors.warn,
-    'inputValidation.warningBorder': colors.warn,
+    'inputValidation.warningBackground': colors.utility.warn,
+    'inputValidation.warningBorder': colors.utility.warn,
     'list.activeSelectionBackground': colors.background.highlight,
     'list.activeSelectionForeground': colors.foreground.default,
-    'list.dropBackground': `${colors.info}40`,
+    'list.dropBackground': `${colors.utility.info}40`,
     'list.errorForeground': colors.primary.highlight,
     'list.focusBackground': colors.background.active,
-    'list.focusForeground': colors.info,
-    'list.highlightForeground': colors.info,
+    'list.focusForeground': colors.utility.info,
+    'list.highlightForeground': colors.utility.info,
     'list.hoverBackground': colors.background.highlight,
-    'list.hoverForeground': colors.info,
+    'list.hoverForeground': colors.utility.info,
     'list.inactiveSelectionBackground': colors.background.default,
     'list.inactiveSelectionForeground': colors.foreground.default,
     'list.invalidItemForeground': colors.primary.highlight,
@@ -182,20 +194,20 @@ const theme = {
     'menu.background': colors.background.default,
     'menu.foreground': `${colors.foreground.default}cc`,
     'menu.selectionBackground': colors.background.highlight,
-    'menu.selectionForeground': colors.info,
+    'menu.selectionForeground': colors.utility.info,
     'menu.separatorBackground': colors.primary.default,
     'menubar.selectionBackground': colors.background.highlight,
     'merge.currentHeaderBackground': colors.foreground.muted,
-    'merge.incomingHeaderBackground': colors.primary + '99',
+    'merge.incomingHeaderBackground': colors.primary.default + '99',
     'notificationCenterHeader.background': colors.background.highlight,
     'notificationCenterHeader.foreground': colors.foreground.highlight,
-    'notificationLink.foreground': colors.info,
+    'notificationLink.foreground': colors.utility.info,
     'notifications.background': colors.background.default,
     'notifications.border': `${colors.primary.default}99`,
     'notifications.foreground': colors.foreground.highlight,
     'panel.background': colors.background.default,
-    'panel.border': colors.background.default,
-    'panelTitle.activeBorder': colors.debug,
+    'panel.border': colors.border.default,
+    'panelTitle.activeBorder': colors.border.default,
     'panelTitle.activeForeground': colors.foreground.default,
     'panelTitle.inactiveForeground': colors.foreground.muted,
     'peekView.border': colors.background.active,
@@ -212,12 +224,12 @@ const theme = {
     'peekViewTitleLabel.foreground': colors.foreground.default,
     'pickerGroup.border': colors.background.default,
     'pickerGroup.foreground': colors.foreground.highlight,
-    'progressBar.background': colors.warn,
+    'progressBar.background': colors.primary.default,
     'scrollbar.shadow': colors.border.default,
     'scrollbarSlider.activeBackground': colors.background.active + '99',
     'scrollbarSlider.background': colors.background.highlight + '99',
     'scrollbarSlider.hoverBackground': colors.background.active + '99',
-    'selection.background': `${colors.warn}55`,
+    'selection.background': `${colors.primary.default}55`,
     'settings.dropdownForeground': colors.foreground.default,
     'settings.textInputBackground': colors.background.highlight,
     'settings.textInputBorder': colors.background.highlight,
@@ -250,22 +262,22 @@ const theme = {
     'tab.inactiveForeground': colors.foreground.inactive,
     'tab.unfocusedActiveForeground': colors.foreground.muted,
     'tab.unfocusedInactiveForeground': colors.foreground.muted,
-    'terminal.ansiBlack': colors.background.active,
-    'terminal.ansiBlue': colors.warn,
-    'terminal.ansiBrightBlack': colors.primary.default,
-    'terminal.ansiBrightBlue': colors.info,
-    'terminal.ansiBrightCyan': colors.info,
-    'terminal.ansiBrightGreen': colors.info,
-    'terminal.ansiBrightMagenta': colors.primary.highlight,
-    'terminal.ansiBrightRed': colors.warn,
-    'terminal.ansiBrightWhite': colors.foreground.default,
-    'terminal.ansiBrightYellow': colors.foreground.default,
-    'terminal.ansiCyan': colors.info,
-    'terminal.ansiGreen': colors.info,
-    'terminal.ansiMagenta': colors.primary.highlight,
-    'terminal.ansiRed': colors.primary.default,
-    'terminal.ansiWhite': colors.foreground.default,
-    'terminal.ansiYellow': colors.warn,
+    'terminal.ansiBlack': colors.rainbow.black,
+    'terminal.ansiBlue': colors.rainbow.blue,
+    'terminal.ansiBrightBlack': colors.rainbow.white,
+    'terminal.ansiBrightBlue': colors.rainbow.blue,
+    'terminal.ansiBrightCyan': colors.rainbow.cyan,
+    'terminal.ansiBrightGreen': colors.rainbow.green,
+    'terminal.ansiBrightMagenta': colors.rainbow.pink,
+    'terminal.ansiBrightRed': colors.rainbow.red,
+    'terminal.ansiBrightWhite': colors.rainbow.white,
+    'terminal.ansiBrightYellow': colors.rainbow.yellow,
+    'terminal.ansiCyan': colors.rainbow.cyan,
+    'terminal.ansiGreen': colors.rainbow.green,
+    'terminal.ansiMagenta': colors.rainbow.pink,
+    'terminal.ansiRed': colors.rainbow.red,
+    'terminal.ansiWhite': colors.rainbow.white,
+    'terminal.ansiYellow': colors.rainbow.yellow,
     'terminal.background': colors.background.default,
     'terminal.foreground': colors.foreground.default,
     'terminal.selectionBackground': `${colors.primary.default}33`,
@@ -296,7 +308,7 @@ const theme = {
     {
       scope: 'punctuation, constant.other.symbol',
       settings: {
-        foreground: colors.color2,
+        foreground: colors.foreground.muted,
       },
     },
     {
@@ -331,26 +343,19 @@ const theme = {
       },
     },
     {
-      scope: 'keyword.other',
+      scope: 'keyword, keyword.other, modifier',
       settings: {
-        foreground: colors.color2,
-      },
-    },
-    {
-      scope: 'keyword, modifier, variable.language.this, support.type.object, constant.language',
-      settings: {
-        foreground: colors.primary.default,
-        fontStyle: 'italic',
+        foreground: colors.foreground.muted,
       },
     },
     {
       scope: 'constant.language.import-export-all',
       settings: {
-        foreground: colors.info,
+        foreground: colors.utility.info,
       },
     },
     {
-      scope: 'keyword, modifier, variable.language.this, support.type.object, constant.language',
+      scope: 'variable.language.this, support.type.object, constant.language',
       settings: {
         foreground: colors.primary.default,
       },
@@ -364,7 +369,7 @@ const theme = {
     {
       scope: 'storage.type, storage.modifier',
       settings: {
-        foreground: colors.warn,
+        foreground: colors.primary.default,
       },
     },
     {
@@ -377,32 +382,26 @@ const theme = {
     {
       scope: 'support.type, constant.other.key',
       settings: {
-        foreground: colors.color2,
+        foreground: colors.foreground.muted,
       },
     },
     {
       scope: 'entity.name.type, entity.other.inherited-class, entity.other',
       settings: {
-        foreground: colors.color2,
+        foreground: colors.foreground.muted,
       },
     },
     {
-      scope: 'comment',
+      scope: 'comment, punctuation.definition.comment',
       settings: {
-        foreground: `${colors.warn}aa`,
+        foreground: `${colors.foreground.muted}`,
         fontStyle: 'italic',
       },
     },
     {
       scope: 'punctuation',
       settings: {
-        foreground: colors.color2,
-      },
-    },
-    {
-      scope: 'punctuation.definition.comment',
-      settings: {
-        foreground: `${colors.warn}aa`,
+        foreground: colors.foreground.muted,
       },
     },
     {
@@ -420,7 +419,7 @@ const theme = {
     {
       scope: 'meta.definition.method entity.name.function',
       settings: {
-        foreground: colors.warn,
+        foreground: colors.primary.default,
       },
     },
     {
@@ -445,7 +444,7 @@ const theme = {
     {
       scope: 'entity.name.tag.yaml',
       settings: {
-        foreground: colors.warn,
+        foreground: colors.primary.default,
       },
     },
     {
@@ -463,19 +462,19 @@ const theme = {
     {
       scope: 'entity.other.attribute-name.class',
       settings: {
-        foreground: colors.warn,
+        foreground: colors.primary.default,
       },
     },
     {
       scope: 'entity.other.attribute-name.id',
       settings: {
-        foreground: colors.warn,
+        foreground: colors.primary.default,
       },
     },
     {
       scope: 'source.css entity.name.tag',
       settings: {
-        foreground: colors.warn,
+        foreground: colors.primary.default,
       },
     },
     {
@@ -487,13 +486,13 @@ const theme = {
     {
       scope: 'meta.tag, punctuation.definition.tag',
       settings: {
-        foreground: `${colors.warn}aa`,
+        foreground: `${colors.primary.default}`,
       },
     },
     {
       scope: 'entity.name.tag',
       settings: {
-        foreground: colors.warn,
+        foreground: colors.primary.default,
       },
     },
     {
@@ -506,29 +505,24 @@ const theme = {
     {
       scope: 'markup.heading',
       settings: {
-        foreground: colors.color2,
+        foreground: colors.foreground.muted,
       },
     },
     {
       scope: 'markup.inserted',
       settings: {
-        foreground: colors.info,
+        foreground: colors.utility.info,
       },
     },
     {
       scope: 'markup.deleted',
       settings: {
-        foreground: colors.error,
+        foreground: colors.utility.error,
       },
     },
     {
-      scope: 'text.html.markdown meta.link.inline, meta.link.reference',
-      settings: {
-        foreground: colors.primary.default,
-      },
-    },
-    {
-      scope: 'text.html.markdown beginning.punctuation.definition.list',
+      scope:
+        'text.html.markdown meta.link.inline, meta.link.reference, text.html.markdown beginning.punctuation.definition.list',
       settings: {
         foreground: colors.primary.default,
       },
@@ -536,14 +530,14 @@ const theme = {
     {
       scope: 'markup.italic',
       settings: {
-        foreground: colors.color2,
+        foreground: colors.utility.success,
         fontStyle: 'italic',
       },
     },
     {
       scope: 'markup.bold',
       settings: {
-        foreground: colors.color2,
+        foreground: colors.utility.success,
         fontStyle: 'bold',
       },
     },
@@ -557,39 +551,39 @@ const theme = {
     {
       scope: ['markup.bold markup.italic', 'markup.italic markup.bold'],
       settings: {
-        foreground: colors.color2,
+        foreground: colors.utility.success,
         fontStyle: 'italic bold',
       },
     },
     {
       scope: 'markup.fenced_code.block.markdown punctuation.definition.markdown',
       settings: {
-        foreground: colors.color2,
+        foreground: colors.utility.success,
       },
     },
     {
       scope: 'entity.name.section.markdown',
       settings: {
-        foreground: colors.color2,
+        foreground: colors.utility.success,
         fontStyle: 'bold',
       },
     },
     {
       scope: 'punctuation.definition.comment.html',
       settings: {
-        foreground: `${colors.warn}aa`,
+        foreground: `${colors.primary.default}aa`,
       },
     },
     {
       scope: 'punctuation.definition.inserted',
       settings: {
-        foreground: colors.info,
+        foreground: colors.utility.info,
       },
     },
     {
       scope: 'punctuation.definition.deleted',
       settings: {
-        foreground: colors.error,
+        foreground: colors.utility.error,
       },
     },
     {
@@ -601,13 +595,13 @@ const theme = {
     {
       scope: 'keyword.other.definition.ini',
       settings: {
-        foreground: colors.color2,
+        foreground: colors.foreground.muted,
       },
     },
     {
       scope: 'entity.name.section.group-title.ini',
       settings: {
-        foreground: colors.color2,
+        foreground: colors.foreground.muted,
       },
     },
     {
@@ -661,7 +655,7 @@ const theme = {
     {
       scope: 'support.class.component',
       settings: {
-        foreground: colors.color2,
+        foreground: colors.foreground.muted,
       },
     },
     {
@@ -685,7 +679,7 @@ const theme = {
     {
       scope: 'meta.block',
       settings: {
-        foreground: colors.color2,
+        foreground: colors.foreground.muted,
       },
     },
     {
@@ -703,14 +697,14 @@ const theme = {
     {
       scope: ['keyword.control'],
       settings: {
-        foreground: colors.color2,
+        foreground: colors.foreground.muted,
         fontStyle: 'italic',
       },
     },
     {
       scope: ['keyword.operator.arithmetic'],
       settings: {
-        foreground: colors.color2,
+        foreground: colors.foreground.muted,
       },
     },
     {
@@ -729,7 +723,7 @@ const theme = {
     {
       scope: ['punctuation.definition.quote'],
       settings: {
-        foreground: colors.color2,
+        foreground: colors.foreground.muted,
       },
     },
     {
@@ -751,7 +745,7 @@ const theme = {
         'meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json support.type.property-name.json',
       ],
       settings: {
-        foreground: colors.color2,
+        foreground: colors.utility.success,
       },
     },
     {
@@ -759,7 +753,7 @@ const theme = {
         'meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.value.json meta.structure.dictionary.value.json meta.structure.dictionary.json support.type.property-name.json',
       ],
       settings: {
-        foreground: colors.color2,
+        foreground: colors.utility.success,
       },
     },
     {
@@ -767,7 +761,7 @@ const theme = {
         'meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.value.json meta.structure.dictionary.value.json meta.structure.dictionary.value.json meta.structure.dictionary.value.json meta.structure.dictionary.value.json meta.structure.dictionary.value.json meta.structure.dictionary.value.json meta.structure.dictionary.value.json support.type.property-name.json',
       ],
       settings: {
-        foreground: `${colors.primary.default}99`,
+        foreground: `${colors.primary.default}`,
       },
     },
     {
@@ -783,7 +777,7 @@ const theme = {
         'meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.value.json meta.structure.dictionary.value.json meta.structure.dictionary.value.json meta.structure.dictionary.value.json meta.structure.dictionary.value.json meta.structure.dictionary.value.json meta.structure.dictionary.value.json meta.structure.dictionary.value.json meta.structure.dictionary.value.json meta.structure.dictionary.value.json support.type.property-name.json',
       ],
       settings: {
-        foreground: colors.color2,
+        foreground: colors.utility.success,
       },
     },
     {
@@ -791,7 +785,7 @@ const theme = {
         'meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.value.json meta.structure.dictionary.value.json meta.structure.dictionary.value.json meta.structure.dictionary.value.json meta.structure.dictionary.value.json meta.structure.dictionary.value.json meta.structure.dictionary.value.json meta.structure.dictionary.value.json meta.structure.dictionary.value.json meta.structure.dictionary.value.json support.type.property-name.json',
       ],
       settings: {
-        foreground: colors.warn,
+        foreground: colors.primary.default,
       },
     },
     {
@@ -799,13 +793,13 @@ const theme = {
         'meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.value.json meta.structure.dictionary.value.json meta.structure.dictionary.value.json meta.structure.dictionary.value.json meta.structure.dictionary.value.json meta.structure.dictionary.value.json meta.structure.dictionary.value.json meta.structure.dictionary.value.json meta.structure.dictionary.value.json meta.structure.dictionary.value.json support.type.property-name.json',
       ],
       settings: {
-        foreground: colors.info,
+        foreground: colors.utility.info,
       },
     },
     {
       scope: 'token.info-token',
       settings: {
-        foreground: colors.info,
+        foreground: colors.utility.info,
       },
     },
     {
@@ -817,13 +811,13 @@ const theme = {
     {
       scope: 'token.error-token',
       settings: {
-        foreground: colors.error,
+        foreground: colors.utility.error,
       },
     },
     {
       scope: 'token.debug-token',
       settings: {
-        foreground: colors.color2,
+        foreground: colors.utility.success,
       },
     },
   ],

@@ -20,11 +20,6 @@
         "label": "Oodri - Drawbridge",
         "uiTheme": "vs-dark",
         "path": "./themes/purple-dreams-2-color-theme.json"
-      },
-      {
-        "label": "Oodri - Purple Dreams",
-        "uiTheme": "vs-dark",
-        "path": "./themes/purple-dreams-color-theme.json"
       }
     ]
   },
