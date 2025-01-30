@@ -40,7 +40,9 @@
     "ignorePaths": [],
     "dictionaryDefinitions": [],
     "dictionaries": [],
-    "words": [],
+    "words": [
+      "Moonspell"
+    ],
     "ignoreWords": [],
     "import": []
   }
