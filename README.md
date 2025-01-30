@@ -4,9 +4,12 @@
 
 ## Versioning
 
-This repo is using automated versioning using github-tag-action.  The repo can be found here:  https://github.com/anothrNick/github-tag-action/tree/1.64.0/
+This repo is using automated versioning using github-tag-action and commit messages.  The repo can be found here:  https://github.com/anothrNick/github-tag-action/tree/1.64.0/
 
-> Any commit message that includes #major, #minor, #patch, or #none will trigger the respective version bump. If two or more are present, the highest-ranking one will take precedence. If #none is contained in the merge commit message, it will skip bumping regardless DEFAULT_BUMP.
-> Automatic Bumping: If no #major, #minor or #patch tag is contained in the merge commit message, it will bump whichever DEFAULT_BUMP is set to (which is minor by default). Disable this by setting DEFAULT_BUMP to none.
+Commit messages:
 
-This repo is setup to use "patch" as the default when pushing to the main branch
+- #none: skips the versioning (option by default)
+- #major: Major Version (x.0.0)
+- #minor: Minor Version (0.x.0)
+- #patch: Patch Version (0.0.x)
+
