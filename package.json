@@ -16,26 +16,6 @@
   "categories": [
     "Themes"
   ],
-  "keyword": [
-    "Theme",
-    "Oodri Theme",
-    "Aurora",
-    "Dark Theme",
-    "Black Theme",
-    "Arstotzka Theme",
-    "City Lights Theme",
-    "Duotone Theme",
-    "Drawbridge Theme",
-    "Gruvbox Theme",
-    "Night Owl Theme",
-    "Nord Theme",
-    "Papers, Please Theme",
-    "Radical Theme",
-    "In Bed By 7pm",
-    "Kanagawa Theme",
-    "Catppuccin Theme",
-    "Moonspell Theme"
-  ],
   "scripts": {
     "build": "vsce package",
     "publish": "vsce publish",
@@ -60,7 +40,8 @@
     "@typescript-eslint/eslint-plugin": "^8.22.0",
     "@typescript-eslint/parser": "^8.22.0",
     "eslint": "^9.19.0",
-    "ts-node": "^10.9.2"
+    "ts-node": "^10.9.2",
+    "vsce": "^2.15.0"
   },
   "cspell": {
     "version": "0.2",
@@ -68,9 +49,34 @@
     "dictionaryDefinitions": [],
     "dictionaries": [],
     "words": [
-      "Moonspell"
+      "Arstotzka",
+      "Catppuccin",
+      "Gruvbox",
+      "Kanagawa",
+      "Moonspell",
+      "Nord"
     ],
     "ignoreWords": [],
     "import": []
-  }
+  },
+  "keyword": [
+    "Theme",
+    "Oodri Theme",
+    "Aurora",
+    "Dark Theme",
+    "Black Theme",
+    "Arstotzka Theme",
+    "City Lights Theme",
+    "Duotone Theme",
+    "Drawbridge Theme",
+    "Gruvbox Theme",
+    "Night Owl Theme",
+    "Nord Theme",
+    "Papers, Please Theme",
+    "Radical Theme",
+    "In Bed By 7pm",
+    "Kanagawa Theme",
+    "Catppuccin Theme",
+    "Moonspell Theme"
+  ]
 }

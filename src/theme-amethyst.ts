@@ -56,7 +56,7 @@ const colors = {
     warn: '#e19981',
     error: '#ea96f2',
   },
-  debug: '#fcba03',
+  debug: '#9889F2',
 }
 
 const theme = {
