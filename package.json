@@ -17,9 +17,14 @@
   "contributes": {
     "themes": [
       {
+        "label": "Oodri - Northern Lights",
+        "uiTheme": "vs-dark",
+        "path": "./themes/theme-northern-lights.json"
+      },
+      {
         "label": "Oodri - Drawbridge",
         "uiTheme": "vs-dark",
-        "path": "./themes/purple-dreams-2-color-theme.json"
+        "path": "./themes/theme-purple-dream.json"
       }
     ]
   },

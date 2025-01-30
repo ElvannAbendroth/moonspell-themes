@@ -7,6 +7,9 @@ const execAsync = promisify(exec)
 const readdirAsync = promisify(fs.readdir)
 const unlinkAsync = promisify(fs.unlink)
 
+const themesDir = path.resolve(__dirname, '../themes')
+const srcDir = path.resolve(__dirname, '../src')
+
 async function generateTheme(scriptPath: string, outputPath: string) {
   const command = `ts-node ${scriptPath} > ${outputPath}`
   try {
@@ -18,31 +21,27 @@ async function generateTheme(scriptPath: string, outputPath: string) {
 }
 
 async function deleteOrphanedJsonFiles() {
-  const srcDir = path.resolve(__dirname, '../themes')
-  const themeFiles = await readdirAsync(srcDir)
+  const themeFiles = await readdirAsync(themesDir)
+  const srcFiles = await readdirAsync(srcDir)
+
   const tsFiles = new Set(
-    themeFiles.filter(file => file.endsWith('-color-theme.ts')).map(file => file.replace('.ts', '.json'))
+    srcFiles.filter(file => file.startsWith('theme-') && file.endsWith('.ts')).map(file => file.replace('.ts', '.json'))
   )
 
   for (const file of themeFiles) {
     if (file.endsWith('.json') && !tsFiles.has(file)) {
-      const filePath = path.join(srcDir, file)
-      try {
-        await unlinkAsync(filePath)
-        console.log(`✅ Deleted orphaned JSON file: ${filePath}`)
-      } catch (error) {
-        console.error(`🔴 Error deleting file: ${filePath}`, error)
-      }
+      const filePath = path.join(themesDir, file)
+      await unlinkAsync(filePath)
+      console.log(`🗑️ Deleted orphaned theme file: ${filePath}`)
     }
   }
 }
 
 export async function generateAllThemes() {
-  const srcDir = path.resolve(__dirname, '../themes')
   const themeFiles = await readdirAsync(srcDir)
 
   for (const file of themeFiles) {
-    if (file.endsWith('-color-theme.ts')) {
+    if (file.startsWith('theme-') && file.endsWith('.ts')) {
       const scriptPath = path.join(srcDir, file)
       const outputFileName = file.replace('.ts', '.json')
       const outputPath = path.resolve(__dirname, '../themes', outputFileName)

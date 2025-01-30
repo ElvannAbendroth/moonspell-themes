@@ -1,5 +1,5 @@
-import { generateAllThemes } from './src/theme-generator'
-import { updateThemes } from './src/update-themes'
+import { generateAllThemes } from './src/_generate'
+import { updateThemes } from './src/_update'
 
 generateAllThemes().catch(console.error)
 

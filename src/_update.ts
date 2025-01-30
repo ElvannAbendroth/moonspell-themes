@@ -14,7 +14,7 @@ export function updateThemes() {
     const themes: { label: string; uiTheme: string; path: string }[] = []
 
     files
-      .filter(file => file.endsWith('-color-theme.json'))
+      .filter(file => file.endsWith('.json'))
       .forEach(file => {
         const themePath = path.join(themesDir, file)
         let themeData

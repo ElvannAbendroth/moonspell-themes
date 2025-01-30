@@ -1,6 +1,7 @@
 {
   "name": "Oodri - Drawbridge",
   "type": "dark",
+  "description": "A dark theme with a purple touch",
   "colors": {
     "activityBar.background": "#131520",
     "activityBar.border": "#1b1f32",

@@ -1,3 +1,9 @@
+const meta = {
+  name: 'Oodri - Drawbridge',
+  description: 'A dark theme with a purple touch',
+  type: 'dark',
+}
+
 const colors = {
   background: {
     muted: '#0F111A',
@@ -52,8 +58,9 @@ const colors = {
 }
 
 const theme = {
-  name: 'Oodri - Drawbridge',
-  type: 'dark',
+  name: meta.name,
+  type: meta.type,
+  description: meta.description,
   colors: {
     'activityBar.background': colors.background.default,
     'activityBar.border': colors.border.default,
