@@ -21,22 +21,11 @@ const colors = {
     foreground: '#b8cdfe',
   },
   warn: '#627af4',
-  color1: '#a5b3fe',
-  color4: '#82AAFF',
-  accent1: '#99e9ff',
-  accent2: '#ea96f2',
   info: '#67c9e4',
-  untracked: '#289dbd',
-  editorWidgetResizeBorder: '#4db0cb',
-  supportClassComponent: '#4db0cb',
-  supportTypePropertyNameJson: '#4db0cb',
-  color3: '#4db0cb',
+  untracked: '#24dbc3',
   color2: '#86e0f9',
+  accent2: '#ea96f2',
   error: '#ec407a',
-  scrollbarShadow: '#13152000',
-  scrollbarSliderActiveBackground: '#51587b11',
-  scrollbarSliderBackground: '#444b6f33',
-  scrollbarSliderHoverBackground: '#444b6f11',
   debug: '#fcba03',
 }
 
@@ -111,43 +100,43 @@ const theme = {
     'editorInlayHint.typeBackground': colors.background.highlight + '00',
     'editorInlayHint.typeForeground': `${colors.primary.default}99`,
     'editorLineNumber.activeForeground': colors.foreground.default,
-    'editorLineNumber.foreground': colors.foreground.muted,
+    'editorLineNumber.foreground': colors.foreground.inactive,
     'editorLink.activeForeground': colors.primary.default,
     'editorMarkerNavigation.background': colors.foreground.muted,
     'editorMarkerNavigationError.background': colors.primary.default,
     'editorMarkerNavigationWarning.background': colors.warn,
     'editorOverviewRuler.addedForeground': `${colors.info}99`,
-    'editorOverviewRuler.border': colors.scrollbarShadow,
-    'editorOverviewRuler.bracketMatchForeground': colors.scrollbarShadow,
-    'editorOverviewRuler.commonContentForeground': colors.error,
-    'editorOverviewRuler.currentContentForeground': colors.error,
-    'editorOverviewRuler.deletedForeground': `${colors.error}99`,
+    'editorOverviewRuler.border': colors.border.highlight,
+    'editorOverviewRuler.bracketMatchForeground': colors.debug,
+    'editorOverviewRuler.commonContentForeground': colors.debug,
+    'editorOverviewRuler.currentContentForeground': colors.debug,
+    'editorOverviewRuler.deletedForeground': `${colors.primary}99`,
     'editorOverviewRuler.errorForeground': colors.error,
-    'editorOverviewRuler.findMatchForeground': colors.scrollbarShadow,
-    'editorOverviewRuler.incomingContentForeground': colors.error,
-    'editorOverviewRuler.infoForeground': colors.scrollbarShadow,
+    'editorOverviewRuler.infoForeground': colors.info,
+    'editorOverviewRuler.warningForeground': colors.warn,
+    'editorOverviewRuler.findMatchForeground': colors.border.default,
+    'editorOverviewRuler.incomingContentForeground': colors.debug,
     'editorOverviewRuler.modifiedForeground': `${colors.primary.default}99`,
-    'editorOverviewRuler.rangeHighlightForeground': colors.scrollbarShadow,
-    'editorOverviewRuler.selectionHighlightForeground': colors.scrollbarShadow,
-    'editorOverviewRuler.warningForeground': colors.primary.default,
-    'editorOverviewRuler.wordHighlightForeground': colors.scrollbarShadow,
-    'editorOverviewRuler.wordHighlightStrongForeground': colors.scrollbarShadow,
+    'editorOverviewRuler.rangeHighlightForeground': colors.debug,
+    'editorOverviewRuler.selectionHighlightForeground': colors.debug,
+    'editorOverviewRuler.wordHighlightForeground': colors.debug,
+    'editorOverviewRuler.wordHighlightStrongForeground': colors.debug,
     'editorRuler.foreground': colors.foreground.default,
     'editorSuggestWidget.background': colors.background.active,
     'editorSuggestWidget.border': colors.background.default,
     'editorSuggestWidget.foreground': colors.foreground.default,
-    'editorSuggestWidget.highlightForeground': colors.accent1,
+    'editorSuggestWidget.highlightForeground': colors.foreground.highlight,
     'editorSuggestWidget.selectedBackground': colors.background.default,
     'editorWarning.foreground': colors.warn,
     'editorWhitespace.foreground': colors.foreground.muted,
     'editorWidget.background': colors.background.default,
     'editorWidget.border': colors.background.default,
-    'editorWidget.resizeBorder': colors.editorWidgetResizeBorder,
+    'editorWidget.resizeBorder': colors.color2,
     errorForeground: colors.primary.default,
     'extensionButton.prominentBackground': colors.primary.default,
     'extensionButton.prominentForeground': colors.foreground.default,
     'extensionButton.prominentHoverBackground': colors.primary.default,
-    focusBorder: colors.scrollbarShadow,
+    focusBorder: colors.debug,
     foreground: colors.foreground.muted,
     'gitDecoration.addedResourceForeground': colors.info,
     'gitDecoration.conflictingResourceForeground': `${colors.error}99`,
@@ -214,10 +203,10 @@ const theme = {
     'pickerGroup.border': colors.background.default,
     'pickerGroup.foreground': colors.foreground.highlight,
     'progressBar.background': colors.warn,
-    'scrollbar.shadow': colors.scrollbarShadow,
-    'scrollbarSlider.activeBackground': colors.scrollbarSliderActiveBackground,
-    'scrollbarSlider.background': colors.scrollbarSliderBackground,
-    'scrollbarSlider.hoverBackground': colors.scrollbarSliderHoverBackground,
+    'scrollbar.shadow': colors.border.default,
+    'scrollbarSlider.activeBackground': colors.background.active,
+    'scrollbarSlider.background': colors.background.highlight,
+    'scrollbarSlider.hoverBackground': colors.background.active,
     'selection.background': `${colors.warn}55`,
     'settings.dropdownForeground': colors.foreground.default,
     'settings.textInputBackground': colors.background.highlight,
@@ -232,7 +221,7 @@ const theme = {
     'statusBar.background': colors.background.default,
     'statusBar.border': colors.background.default,
     'statusBar.debuggingBackground': colors.background.default,
-    'statusBar.debuggingBorder': colors.supportClassComponent,
+    'statusBar.debuggingBorder': colors.color2,
     'statusBar.debuggingForeground': colors.foreground.default,
     'statusBar.foreground': colors.foreground.inactive,
     'statusBar.noFolderBackground': colors.background.default,
@@ -243,7 +232,7 @@ const theme = {
     'statusBarItem.prominentHoverBackground': colors.background.highlight,
     'tab.activeBackground': colors.background.default,
     'tab.activeBorder': colors.background.default,
-    'tab.activeBorderTop': colors.supportClassComponent,
+    'tab.activeBorderTop': colors.color2,
     'tab.activeForeground': colors.foreground.default,
     'tab.border': colors.background.default,
     'tab.hoverBackground': colors.background.default,
@@ -291,7 +280,7 @@ const theme = {
     {
       scope: 'string',
       settings: {
-        foreground: colors.color1,
+        foreground: colors.foreground.default,
       },
     },
     {
@@ -303,7 +292,7 @@ const theme = {
     {
       scope: 'constant.character.escape, text.html constant.character.entity.named, punctuation.definition.entity.html',
       settings: {
-        foreground: colors.color1,
+        foreground: colors.debug,
       },
     },
     {
@@ -334,7 +323,7 @@ const theme = {
     {
       scope: 'keyword.other',
       settings: {
-        foreground: colors.supportClassComponent,
+        foreground: colors.color2,
       },
     },
     {
@@ -378,13 +367,13 @@ const theme = {
     {
       scope: 'support.type, constant.other.key',
       settings: {
-        foreground: colors.color3,
+        foreground: colors.color2,
       },
     },
     {
       scope: 'entity.name.type, entity.other.inherited-class, entity.other',
       settings: {
-        foreground: colors.color3,
+        foreground: colors.color2,
       },
     },
     {
@@ -397,7 +386,7 @@ const theme = {
     {
       scope: 'punctuation',
       settings: {
-        foreground: colors.supportClassComponent,
+        foreground: colors.color2,
       },
     },
     {
@@ -427,7 +416,7 @@ const theme = {
     {
       scope: 'meta.function entity.name.function',
       settings: {
-        foreground: colors.color4,
+        foreground: colors.primary.highlight,
       },
     },
     {
@@ -507,7 +496,7 @@ const theme = {
     {
       scope: 'markup.heading',
       settings: {
-        foreground: colors.untracked,
+        foreground: colors.color2,
       },
     },
     {
@@ -537,14 +526,14 @@ const theme = {
     {
       scope: 'markup.italic',
       settings: {
-        foreground: colors.untracked,
+        foreground: colors.color2,
         fontStyle: 'italic',
       },
     },
     {
       scope: 'markup.bold',
       settings: {
-        foreground: colors.untracked,
+        foreground: colors.color2,
         fontStyle: 'bold',
       },
     },
@@ -558,20 +547,20 @@ const theme = {
     {
       scope: ['markup.bold markup.italic', 'markup.italic markup.bold'],
       settings: {
-        foreground: colors.untracked,
+        foreground: colors.color2,
         fontStyle: 'italic bold',
       },
     },
     {
       scope: 'markup.fenced_code.block.markdown punctuation.definition.markdown',
       settings: {
-        foreground: colors.supportClassComponent,
+        foreground: colors.color2,
       },
     },
     {
       scope: 'entity.name.section.markdown',
       settings: {
-        foreground: colors.supportClassComponent,
+        foreground: colors.color2,
         fontStyle: 'bold',
       },
     },
@@ -602,7 +591,7 @@ const theme = {
     {
       scope: 'keyword.other.definition.ini',
       settings: {
-        foreground: colors.untracked,
+        foreground: colors.color2,
       },
     },
     {
@@ -662,7 +651,7 @@ const theme = {
     {
       scope: 'support.class.component',
       settings: {
-        foreground: colors.supportClassComponent,
+        foreground: colors.color2,
       },
     },
     {
@@ -680,19 +669,19 @@ const theme = {
     {
       scope: 'source.python meta.function-call.python, meta.function-call.arguments',
       settings: {
-        foreground: colors.color4,
+        foreground: colors.debug,
       },
     },
     {
       scope: 'meta.block',
       settings: {
-        foreground: colors.untracked,
+        foreground: colors.color2,
       },
     },
     {
       scope: 'entity.name.function.call',
       settings: {
-        foreground: colors.color4,
+        foreground: colors.primary.highlight,
       },
     },
     {
@@ -704,14 +693,14 @@ const theme = {
     {
       scope: ['keyword.control'],
       settings: {
-        foreground: colors.supportClassComponent,
+        foreground: colors.color2,
         fontStyle: 'italic',
       },
     },
     {
       scope: ['keyword.operator.arithmetic'],
       settings: {
-        foreground: colors.supportClassComponent,
+        foreground: colors.color2,
       },
     },
     {
@@ -730,7 +719,7 @@ const theme = {
     {
       scope: ['punctuation.definition.quote'],
       settings: {
-        foreground: colors.supportClassComponent,
+        foreground: colors.color2,
       },
     },
     {
@@ -752,7 +741,7 @@ const theme = {
         'meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json support.type.property-name.json',
       ],
       settings: {
-        foreground: colors.supportClassComponent,
+        foreground: colors.color2,
       },
     },
     {
@@ -760,7 +749,7 @@ const theme = {
         'meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.value.json meta.structure.dictionary.value.json meta.structure.dictionary.json support.type.property-name.json',
       ],
       settings: {
-        foreground: colors.supportClassComponent,
+        foreground: colors.color2,
       },
     },
     {
@@ -784,7 +773,7 @@ const theme = {
         'meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.value.json meta.structure.dictionary.value.json meta.structure.dictionary.value.json meta.structure.dictionary.value.json meta.structure.dictionary.value.json meta.structure.dictionary.value.json meta.structure.dictionary.value.json meta.structure.dictionary.value.json meta.structure.dictionary.value.json meta.structure.dictionary.value.json support.type.property-name.json',
       ],
       settings: {
-        foreground: colors.supportTypePropertyNameJson,
+        foreground: colors.color2,
       },
     },
     {
@@ -824,7 +813,7 @@ const theme = {
     {
       scope: 'token.debug-token',
       settings: {
-        foreground: colors.supportClassComponent,
+        foreground: colors.color2,
       },
     },
   ],
