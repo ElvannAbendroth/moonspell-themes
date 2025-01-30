@@ -5,6 +5,7 @@ const colors = {
     active: '#252a41',
   },
   foreground: {
+    highlight: '#c3cdfe',
     default: '#b8cdfe',
     muted: '#b8cdfe99',
     inactive: '#b8cdfe77',
@@ -164,7 +165,7 @@ const theme = {
     'icon.foreground': colors.foreground.muted,
     'input.background': colors.background.highlight,
     'input.border': colors.background.default,
-    'input.foreground': colors.menuForeground,
+    'input.foreground': colors.foreground.highlight,
     'input.placeholderForeground': colors.foreground.muted,
     'inputOption.activeBorder': colors.info,
     'inputValidation.errorBackground': colors.primary,
