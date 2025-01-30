@@ -26,7 +26,7 @@ jobs:
       - name: Publish
         uses: lannonbr/vsce-action@4.0.0
         with:
-          args: 'publish -p $VSCE_TOKEN'
+          args: 'publish -p $VSCE_TOKEN --skip-duplicate'
         env:
           VSCE_TOKEN: ${{ secrets.VSCE_TOKEN }}
   tag_release:
