@@ -2,12 +2,39 @@
   "name": "moonspell-themes",
   "displayName": "Moonspell Themes",
   "description": "Ethereal ",
+  "license": "MIT",
   "version": "0.0.1",
+  "publisher": "Dodri",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ElvannAbendroth/moonspell-themes"
+  },
   "engines": {
     "vscode": "^1.96.0"
   },
+  "icon": "night.png",
   "categories": [
     "Themes"
+  ],
+  "keyword": [
+    "Theme",
+    "Oodri Theme",
+    "Aurora",
+    "Dark Theme",
+    "Black Theme",
+    "Arstotzka Theme",
+    "City Lights Theme",
+    "Duotone Theme",
+    "Drawbridge Theme",
+    "Gruvbox Theme",
+    "Night Owl Theme",
+    "Nord Theme",
+    "Papers, Please Theme",
+    "Radical Theme",
+    "In Bed By 7pm",
+    "Kanagawa Theme",
+    "Catppuccin Theme",
+    "Moonspell Theme"
   ],
   "scripts": {
     "build": "vsce package",
