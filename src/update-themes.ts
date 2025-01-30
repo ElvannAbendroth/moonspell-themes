@@ -17,10 +17,16 @@ export function updateThemes() {
       .filter(file => file.endsWith('-color-theme.json'))
       .forEach(file => {
         const themePath = path.join(themesDir, file)
-        const themeData = JSON.parse(fs.readFileSync(themePath, 'utf8'))
+        let themeData
+        try {
+          themeData = JSON.parse(fs.readFileSync(themePath, 'utf8'))
+        } catch (err) {
+          console.error(`Error parsing JSON from file ${file}:`, err)
+          return
+        }
         themes.push({
           label: themeData.name,
-          uiTheme: `vs-${themeData.type}`,
+          uiTheme: themeData.type === 'dark' ? 'vs-dark' : 'vs',
           path: `./themes/${file}`,
         })
       })
