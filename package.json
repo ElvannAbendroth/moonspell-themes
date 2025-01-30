@@ -4,7 +4,7 @@
   "description": "Ethereal ",
   "license": "MIT",
   "version": "0.0.1",
-  "publisher": "Oodri",
+  "publisher": "oodri",
   "repository": {
     "type": "git",
     "url": "https://github.com/ElvannAbendroth/moonspell-themes"
@@ -12,7 +12,7 @@
   "engines": {
     "vscode": "^1.96.0"
   },
-  "icon": "night.png",
+  "icon": "icon.png",
   "categories": [
     "Themes"
   ],
