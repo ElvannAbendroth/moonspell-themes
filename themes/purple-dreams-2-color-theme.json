@@ -3,7 +3,7 @@
   "type": "dark",
   "colors": {
     "activityBar.background": "#131520",
-    "activityBar.border": "#131520",
+    "activityBar.border": "#1b1f32",
     "activityBar.foreground": "#b8cdfe",
     "activityBarBadge.background": "#4961da",
     "activityBarBadge.foreground": "#b8cdfe",
@@ -42,7 +42,7 @@
     "editor.wordHighlightBackground": "#252a4199",
     "editor.wordHighlightStrongBackground": "#252a4199",
     "editorBracketMatch.background": "#131520",
-    "editorBracketMatch.border": "#5e6587",
+    "editorBracketMatch.border": "#1b1f32",
     "editorCodeLens.foreground": "#4961da77",
     "editorCursor.background": "#131520",
     "editorCursor.foreground": "#7289fd",
@@ -60,7 +60,7 @@
     "editorHoverWidget.background": "#1b1f32",
     "editorHoverWidget.border": "#4961da",
     "editorHoverWidget.foreground": "#b8cdfe",
-    "editorIndentGuide.activeBackground1": "#444b6f",
+    "editorIndentGuide.activeBackground1": "#51587b",
     "editorIndentGuide.background1": "#252a41",
     "editorInlayHint.background": "#1b1f3200",
     "editorInlayHint.foreground": "#4961da99",
@@ -69,7 +69,7 @@
     "editorInlayHint.typeBackground": "#1b1f3200",
     "editorInlayHint.typeForeground": "#4961da99",
     "editorLineNumber.activeForeground": "#b8cdfe",
-    "editorLineNumber.foreground": "#444b6f",
+    "editorLineNumber.foreground": "#51587b",
     "editorLink.activeForeground": "#4961da",
     "editorMarkerNavigation.background": "#5e6587",
     "editorMarkerNavigationError.background": "#4961da",
@@ -110,7 +110,7 @@
     "gitDecoration.addedResourceForeground": "#67c9e4",
     "gitDecoration.conflictingResourceForeground": "#ec407a99",
     "gitDecoration.deletedResourceForeground": "#ec407a",
-    "gitDecoration.ignoredResourceForeground": "#444b6f",
+    "gitDecoration.ignoredResourceForeground": "#51587b",
     "gitDecoration.modifiedResourceForeground": "#4961da",
     "gitDecoration.untrackedResourceForeground": "#289dbd",
     "icon.foreground": "#b8cdfe99",
@@ -606,7 +606,7 @@
     {
       "scope": "source.cs meta.preprocessor",
       "settings": {
-        "foreground": "#676E95"
+        "foreground": "#51587b"
       }
     },
     {
