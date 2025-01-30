@@ -1,27 +1,19 @@
 name: Theme Release
 
-# on:
-#   push:
-#     branches:
-#       - main
-#   pull_request:
-#     branches:
-#       - main
-#     types:
-#       - closed
 on:
   push:
     branches:
       - main
-  release:
+  pull_request:
+    branches:
+      - main
     types:
-      - created
+      - closed
 
 jobs:
   deploy:
     name: Deploy VSCode Extension
     runs-on: ubuntu-latest
-    if: startsWith(github.ref, 'refs/tags/')
     steps:
       - uses: actions/checkout@v2
       - uses: actions/setup-node@v4
