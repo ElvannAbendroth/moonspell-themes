@@ -1,7 +1,7 @@
 {
-  "name": "oodri-themes",
-  "displayName": "oodri-themes",
-  "description": "Beautiful Themes for VSCode",
+  "name": "moonspell-themes",
+  "displayName": "Moonspell Themes",
+  "description": "Ethereal ",
   "version": "0.0.1",
   "engines": {
     "vscode": "^1.96.0"
@@ -17,14 +17,14 @@
   "contributes": {
     "themes": [
       {
+        "label": "Oodri - Amethyst",
+        "uiTheme": "vs-dark",
+        "path": "./themes/theme-amethyst.json"
+      },
+      {
         "label": "Oodri - Northern Lights",
         "uiTheme": "vs-dark",
         "path": "./themes/theme-northern-lights.json"
-      },
-      {
-        "label": "Oodri - Drawbridge",
-        "uiTheme": "vs-dark",
-        "path": "./themes/theme-purple-dream.json"
       }
     ]
   },
@@ -34,5 +34,14 @@
     "@typescript-eslint/parser": "^8.22.0",
     "eslint": "^9.19.0",
     "ts-node": "^10.9.2"
+  },
+  "cspell": {
+    "version": "0.2",
+    "ignorePaths": [],
+    "dictionaryDefinitions": [],
+    "dictionaries": [],
+    "words": [],
+    "ignoreWords": [],
+    "import": []
   }
 }

@@ -1,6 +1,8 @@
 const meta = {
-  name: 'Oodri - Drawbridge',
-  description: 'A dark theme with a purple touch',
+  name: 'Oodri - Amethyst',
+
+  description:
+    'A dark theme with a purple hue inspired by dark caves & purples amethysts inspired by August Themes Drawbridge',
   type: 'dark',
 }
 
