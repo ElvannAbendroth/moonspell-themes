@@ -3,7 +3,7 @@
   "displayName": "Moonspell Themes",
   "description": "Ethereal ",
   "license": "MIT",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "publisher": "oodri",
   "repository": {
     "type": "git",
@@ -24,12 +24,12 @@
   "contributes": {
     "themes": [
       {
-        "label": "Oodri - Amethyst",
+        "label": "Moonspell - Amethyst",
         "uiTheme": "vs-dark",
         "path": "./themes/theme-amethyst.json"
       },
       {
-        "label": "Oodri - Northern Lights",
+        "label": "Moonspell - Northern Lights",
         "uiTheme": "vs-dark",
         "path": "./themes/theme-northern-lights.json"
       }

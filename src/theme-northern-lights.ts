@@ -1,5 +1,5 @@
 const meta = {
-  name: 'Oodri - Northern Lights',
+  name: 'Moonspell - Northern Lights',
   description:
     'A dark theme with bright pastels inspired by the Northern Lights and based on the Ariake Dark theme from August Themes',
   type: 'dark',
