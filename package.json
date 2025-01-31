@@ -1,9 +1,9 @@
 {
   "name": "moonspell-themes",
   "displayName": "Moonspell Themes",
-  "description": "Ethereal ",
+  "description": "Ethereal",
   "license": "MIT",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "publisher": "oodri",
   "repository": {
     "type": "git",
