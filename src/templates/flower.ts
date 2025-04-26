@@ -1,4 +1,6 @@
-export function makeFlowerTheme(meta, colors) {
+import { ThemeColors, ThemeMeta } from '../types'
+
+export function makeFlowerTheme(meta: ThemeMeta, colors: ThemeColors): Object {
   return {
     name: meta.name,
     type: meta.type,
@@ -11,7 +13,7 @@ export function makeFlowerTheme(meta, colors) {
       'activityBarBadge.background': colors.primary.default,
       'activityBarBadge.foreground': colors.primary.foreground,
       'badge.background': colors.primary.default,
-      'badge.foreground': colors.foreground.default,
+      'badge.foreground': colors.primary.foreground,
       'breadcrumb.activeSelectionForeground': colors.foreground.muted,
       'breadcrumb.focusForeground': colors.foreground.muted,
       'breadcrumb.foreground': colors.foreground.inactive,

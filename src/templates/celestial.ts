@@ -1,4 +1,6 @@
-export function makeCelestialTheme(meta, colors) {
+import { ThemeColors, ThemeMeta } from '../types'
+
+export function makeCelestialTheme(meta: ThemeMeta, colors: ThemeColors): Object {
   return {
     name: meta.name,
     type: meta.type,

@@ -10,7 +10,7 @@
     "activityBarBadge.background": "#7A64E8",
     "activityBarBadge.foreground": "#FFFFFF",
     "badge.background": "#7A64E8",
-    "badge.foreground": "#403A56",
+    "badge.foreground": "#FFFFFF",
     "breadcrumb.activeSelectionForeground": "#726b8a",
     "breadcrumb.focusForeground": "#726b8a",
     "breadcrumb.foreground": "#948daa",

@@ -1,13 +1,14 @@
 import { makeFlowerTheme } from './templates/flower'
+import { ThemeColors, ThemeMeta } from './types'
 
-const meta = {
+const meta: ThemeMeta = {
   name: 'Moonspell - Lavender',
   description:
     'A light theme for VSCode, inspired by the Lavender color palette. It features a light background with soft lavender and purple accents.',
   type: 'light',
 }
 
-const colors = {
+const colors: ThemeColors = {
   background: {
     muted: '#F8F6FC',
     default: '#f4f0fa',

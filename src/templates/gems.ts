@@ -1,4 +1,6 @@
-export function makeGemTheme(meta, colors) {
+import { ThemeColors, ThemeMeta } from '../types'
+
+export function makeGemTheme(meta: ThemeMeta, colors: ThemeColors): Object {
   return {
     name: meta.name,
     type: meta.type,

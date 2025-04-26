@@ -1,13 +1,14 @@
 import { makeCelestialTheme } from './templates/celestial'
+import { ThemeColors, ThemeMeta } from './types'
 
-const meta = {
+const meta: ThemeMeta = {
   name: 'Moonspell - Northern Lights',
   description:
     'A dark theme with bright pastels inspired by the Northern Lights and based on the Ariake Dark theme from August Themes',
   type: 'dark',
 }
 
-const colors = {
+const colors: ThemeColors = {
   background: {
     muted: '#101216',
     default: '#16191e',

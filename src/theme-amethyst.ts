@@ -1,13 +1,14 @@
 import { makeGemTheme } from './templates/gems'
+import { ThemeColors, ThemeMeta } from './types'
 
-const meta = {
+const meta: ThemeMeta = {
   name: 'Moonspell - Amethyst',
   description:
     'A dark theme with a purple hue inspired by dark caves & purples amethysts inspired by August Themes Drawbridge',
   type: 'dark',
 }
 
-const colors = {
+const colors: ThemeColors = {
   background: {
     muted: '#0F111A',
     default: '#131520',
