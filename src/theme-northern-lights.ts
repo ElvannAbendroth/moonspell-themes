@@ -923,6 +923,12 @@ const theme = {
         foreground: '#B267E6',
       },
     },
+    {
+      scope: 'punctuation.definition.list.begin.markdown ',
+      settings: {
+        foreground: colors.primary.highlight,
+      },
+    },
   ],
 }
 

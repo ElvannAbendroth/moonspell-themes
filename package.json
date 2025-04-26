@@ -3,7 +3,7 @@
   "displayName": "Moonspell Themes",
   "description": "Ethereal",
   "license": "MIT",
-  "version": "0.0.4",
+  "version": "0.1.0",
   "publisher": "oodri",
   "repository": {
     "type": "git",
@@ -29,9 +29,19 @@
         "path": "./themes/theme-amethyst.json"
       },
       {
+        "label": "Moonspell - Lavender",
+        "uiTheme": "vs",
+        "path": "./themes/theme-lavender.json"
+      },
+      {
         "label": "Moonspell - Northern Lights",
         "uiTheme": "vs-dark",
         "path": "./themes/theme-northern-lights.json"
+      },
+      {
+        "label": "Moonspell - Ruby",
+        "uiTheme": "vs-dark",
+        "path": "./themes/theme-ruby.json"
       }
     ]
   },
@@ -49,6 +59,7 @@
     "dictionaryDefinitions": [],
     "dictionaries": [],
     "words": [
+      "Ariake",
       "Arstotzka",
       "Catppuccin",
       "Gruvbox",

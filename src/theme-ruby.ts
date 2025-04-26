@@ -1,7 +1,6 @@
 const meta = {
-  name: 'Moonspell - Amethyst',
-  description:
-    'A dark theme with a purple hue inspired by dark caves & purples amethysts inspired by August Themes Drawbridge',
+  name: 'Moonspell - Ruby',
+  description: 'A dark theme with a red  hue inspired by dark caves & rubies inspired by August Themes Drawbridge',
   type: 'dark',
 }
 
@@ -13,49 +12,49 @@ const colors = {
     active: '#252a41',
   },
   foreground: {
-    highlight: '#c3cdfe',
-    default: '#b8cdfe',
-    muted: '#b8cdfe99',
-    inactive: '#b8cdfe77',
+    highlight: '#d8dee9',
+    default: '#d8dee9',
+    muted: '#d8dee999',
+    inactive: '#d8dee977',
   },
   border: {
-    default: '#1b1f32',
-    highlight: '#282C42',
+    default: '#252527', // matching highlight background
+    highlight: '#2f2f32', // matching active background
   },
   primary: {
-    default: '#7966E6',
-    muted: '#634FD5',
-    highlight: '#9889F2',
-    foreground: '#b8cdfe',
+    default: '#ce294a',
+    muted: '#a31c37',
+    highlight: '#e4758b',
+    foreground: '#d8dee9',
   },
   git: {
-    modified: '#9889F2',
-    untracked: '#24dbc3',
+    modified: '#b78eff',
+    untracked: '#99e659',
     added: '#67c9e4',
     ignored: '#b8cdfe55',
-    error: '#ea96f2',
-    deleted: '#ea96f2',
-    conflict: '#e19981',
+    error: '#e4758b',
+    deleted: '#e4758b',
+    conflict: '#f49267',
   },
   rainbow: {
-    purple: '#B396F9',
-    blue: '#8EA7FF',
-    cyan: '#67c9e4',
-    green: '#8EA7FF',
-    yellow: '#B396F9',
-    orange: '#e19981',
-    pink: '#ea96f2',
-    red: '#ea96f2',
-    white: '#E1E1E1',
-    black: '#B8B8B8',
+    purple: '#f6d55c',
+    blue: '#b78eff',
+    cyan: '#f49267',
+    green: '#e4758b',
+    yellow: '#f6d55c',
+    orange: '#f49267',
+    pink: '#e4758b',
+    red: '#e4758b',
+    white: '#d8dee9',
+    black: '#d8dee9',
   },
   utility: {
     info: '#67c9e4',
-    success: '#24dbc3',
-    warn: '#e19981',
-    error: '#ea96f2',
+    success: '#99e659',
+    warn: '#f2b66f',
+    error: '#f53fb2',
   },
-  debug: '#9889F2',
+  debug: '#F28989',
 }
 
 const theme = {

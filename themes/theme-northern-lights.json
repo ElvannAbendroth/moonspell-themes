@@ -849,6 +849,12 @@
       "settings": {
         "foreground": "#B267E6"
       }
+    },
+    {
+      "scope": "punctuation.definition.list.begin.markdown ",
+      "settings": {
+        "foreground": "#9889F2"
+      }
     }
   ]
 }

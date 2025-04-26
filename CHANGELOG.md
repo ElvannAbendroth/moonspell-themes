@@ -8,7 +8,13 @@ Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how 
 
 Feel free to leave me your comments, and to open issues on github if you find issues!
 
-## 0.0.3
+
+## 0.1.0
+
+- Added the Ruby and Lavender themes!
+- Improved synthax Highlight for Mardown files
+
+## 0.0.3 - 0.0.4
 
 ### Amethyst
 
