@@ -10,7 +10,6 @@ export function makeFlowerTheme(meta, colors) {
       'activityBar.foreground': colors.foreground.default,
       'activityBarBadge.background': colors.primary.default,
       'activityBarBadge.foreground': colors.primary.foreground,
-      'activityBar.foregroundHover': colors.primary.default,
       'badge.background': colors.primary.default,
       'badge.foreground': colors.foreground.default,
       'breadcrumb.activeSelectionForeground': colors.foreground.muted,
