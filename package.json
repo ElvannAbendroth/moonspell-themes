@@ -34,11 +34,6 @@
         "path": "./themes/theme-lavender.json"
       },
       {
-        "label": "Moonspell - Northern Lights",
-        "uiTheme": "vs-dark",
-        "path": "./themes/theme-northern-lights.json"
-      },
-      {
         "label": "Moonspell - Ruby",
         "uiTheme": "vs-dark",
         "path": "./themes/theme-ruby.json"
