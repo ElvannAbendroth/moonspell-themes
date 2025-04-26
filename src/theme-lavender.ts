@@ -10,10 +10,10 @@ const meta: ThemeMeta = {
 
 const colors: ThemeColors = {
   background: {
-    muted: '#F8F6FC',
-    default: '#f4f0fa',
-    highlight: '#F0EBF9',
-    active: '#E7E0F5',
+    muted: '#e6e9ef',
+    default: '#eff1f5',
+    highlight: '#eef0f5',
+    active: '#dce0e8',
   },
   foreground: {
     highlight: '#403A56',
@@ -22,14 +22,14 @@ const colors: ThemeColors = {
     inactive: '#948daa',
   },
   border: {
-    default: '#e4e1f0',
-    highlight: '#d5d1e8',
+    default: '#e6e9ef',
+    highlight: '#dce0e8',
   },
   primary: {
     default: '#7A64E8',
     muted: '#6A52E5',
     highlight: '#9A8AF2',
-    foreground: '#FFFFFF',
+    foreground: '#eff1f5',
   },
   git: {
     modified: '#DDA647',
