@@ -14,9 +14,9 @@ export function makeGemTheme(meta: ThemeMeta, colors: ThemeColors): Object {
       'activityBarBadge.foreground': colors.foreground.default,
       'badge.background': colors.primary.default,
       'badge.foreground': colors.foreground.default,
-      'breadcrumb.activeSelectionForeground': colors.foreground.muted,
-      'breadcrumb.focusForeground': colors.foreground.muted,
-      'breadcrumb.foreground': colors.foreground.inactive,
+      'breadcrumb.activeSelectionForeground': colors.foreground.muted + 99,
+      'breadcrumb.focusForeground': colors.foreground.muted + 99,
+      'breadcrumb.foreground': colors.foreground.inactive + 77,
       'breadcrumbPicker.background': colors.background.default,
       'button.background': colors.primary.muted,
       'button.foreground': colors.primary.foreground,
@@ -65,7 +65,7 @@ export function makeGemTheme(meta: ThemeMeta, colors: ThemeColors): Object {
       'editorHoverWidget.background': colors.background.highlight,
       'editorHoverWidget.border': colors.border.default,
       'editorHoverWidget.foreground': colors.foreground.default,
-      'editorIndentGuide.activeBackground1': colors.foreground.muted,
+      'editorIndentGuide.activeBackground1': colors.foreground.muted + 99,
       'editorIndentGuide.background1': colors.background.active,
       'editorInlayHint.background': colors.background.highlight + '00',
       'editorInlayHint.foreground': `${colors.primary.default}99`,
@@ -74,9 +74,9 @@ export function makeGemTheme(meta: ThemeMeta, colors: ThemeColors): Object {
       'editorInlayHint.typeBackground': colors.background.highlight + '00',
       'editorInlayHint.typeForeground': `${colors.primary.default}99`,
       'editorLineNumber.activeForeground': colors.foreground.default,
-      'editorLineNumber.foreground': colors.foreground.inactive,
+      'editorLineNumber.foreground': colors.foreground.inactive + 77,
       'editorLink.activeForeground': colors.primary.default,
-      'editorMarkerNavigation.background': colors.foreground.muted,
+      'editorMarkerNavigation.background': colors.foreground.muted + 99,
       'editorMarkerNavigationError.background': colors.primary.default,
       'editorMarkerNavigationWarning.background': colors.utility.warn,
       'editorOverviewRuler.addedForeground': `${colors.utility.info}99`,
@@ -102,7 +102,7 @@ export function makeGemTheme(meta: ThemeMeta, colors: ThemeColors): Object {
       'editorSuggestWidget.highlightForeground': colors.foreground.highlight,
       'editorSuggestWidget.selectedBackground': colors.background.default,
       'editorWarning.foreground': colors.utility.warn,
-      'editorWhitespace.foreground': colors.foreground.muted,
+      'editorWhitespace.foreground': colors.foreground.muted + 99,
       'editorWidget.background': colors.background.default,
       'editorWidget.border': colors.border.default,
       'editorWidget.resizeBorder': colors.border.default,
@@ -111,18 +111,18 @@ export function makeGemTheme(meta: ThemeMeta, colors: ThemeColors): Object {
       'extensionButton.prominentForeground': colors.foreground.default,
       'extensionButton.prominentHoverBackground': colors.primary.highlight,
       focusBorder: colors.border.default,
-      foreground: colors.foreground.muted,
+      foreground: colors.foreground.muted + 99,
       'gitDecoration.addedResourceForeground': colors.git.added,
       'gitDecoration.conflictingResourceForeground': colors.git.conflict,
       'gitDecoration.deletedResourceForeground': colors.git.deleted,
       'gitDecoration.ignoredResourceForeground': colors.git.ignored,
       'gitDecoration.modifiedResourceForeground': colors.git.modified,
       'gitDecoration.untrackedResourceForeground': colors.git.untracked,
-      'icon.foreground': colors.foreground.muted,
+      'icon.foreground': colors.foreground.muted + 99,
       'input.background': colors.background.highlight,
       'input.border': colors.border.default,
       'input.foreground': colors.foreground.highlight,
-      'input.placeholderForeground': colors.foreground.muted,
+      'input.placeholderForeground': colors.foreground.muted + 99,
       'inputOption.activeBorder': colors.border.default,
       'inputValidation.errorBackground': colors.utility.error,
       'inputValidation.errorBorder': colors.utility.error,
@@ -145,12 +145,12 @@ export function makeGemTheme(meta: ThemeMeta, colors: ThemeColors): Object {
       'list.warningForeground': colors.primary.highlight,
       'menu.background': colors.background.default,
       'menu.border': colors.border.default,
-      'menu.foreground': colors.foreground.muted,
+      'menu.foreground': colors.foreground.muted + 99,
       'menu.selectionBackground': colors.background.highlight,
       'menu.selectionForeground': colors.foreground.default,
       'menu.separatorBackground': colors.border.default,
       'menubar.selectionBackground': colors.background.highlight,
-      'merge.currentHeaderBackground': colors.foreground.muted,
+      'merge.currentHeaderBackground': colors.foreground.muted + 99,
       'merge.incomingHeaderBackground': colors.primary.default + '99',
       'notificationCenterHeader.background': colors.background.highlight,
       'notificationCenterHeader.foreground': colors.foreground.highlight,
@@ -162,18 +162,18 @@ export function makeGemTheme(meta: ThemeMeta, colors: ThemeColors): Object {
       'panel.border': colors.border.default,
       'panelTitle.activeBorder': colors.border.default,
       'panelTitle.activeForeground': colors.foreground.default,
-      'panelTitle.inactiveForeground': colors.foreground.muted,
+      'panelTitle.inactiveForeground': colors.foreground.muted + 99,
       'peekView.border': colors.border.default,
       'peekViewEditor.background': colors.background.default,
       'peekViewEditor.matchHighlightBackground': colors.primary.default,
       'peekViewResult.background': colors.background.highlight,
       'peekViewResult.fileForeground': colors.foreground.default,
-      'peekViewResult.lineForeground': colors.foreground.muted,
+      'peekViewResult.lineForeground': colors.foreground.muted + 99,
       'peekViewResult.matchHighlightBackground': colors.primary.default,
       'peekViewResult.selectionBackground': colors.background.active,
       'peekViewResult.selectionForeground': colors.foreground.default,
       'peekViewTitle.background': colors.background.default,
-      'peekViewTitleDescription.foreground': colors.foreground.muted,
+      'peekViewTitleDescription.foreground': colors.foreground.muted + 99,
       'peekViewTitleLabel.foreground': colors.foreground.default,
       'pickerGroup.border': colors.border.default,
       'pickerGroup.foreground': colors.foreground.highlight,
@@ -189,7 +189,7 @@ export function makeGemTheme(meta: ThemeMeta, colors: ThemeColors): Object {
       'sideBar.background': colors.background.default,
       'sideBar.border': colors.border.default,
       'sideBar.dropBackground': `${colors.primary.highlight}40`,
-      'sideBar.foreground': colors.foreground.muted,
+      'sideBar.foreground': colors.foreground.muted + 99,
       'sideBarSectionHeader.background': colors.background.default,
       'sideBarSectionHeader.foreground': colors.foreground.default,
       'sideBarTitle.foreground': colors.foreground.default,
@@ -198,7 +198,7 @@ export function makeGemTheme(meta: ThemeMeta, colors: ThemeColors): Object {
       'statusBar.debuggingBackground': colors.primary.default,
       'statusBar.debuggingBorder': colors.primary.default,
       'statusBar.debuggingForeground': colors.background.default,
-      'statusBar.foreground': colors.foreground.inactive,
+      'statusBar.foreground': colors.foreground.inactive + 77,
       'statusBar.noFolderBackground': colors.background.default,
       'statusBar.noFolderBorder': colors.border.default,
       'statusBarItem.activeBackground': colors.background.highlight,
@@ -212,9 +212,9 @@ export function makeGemTheme(meta: ThemeMeta, colors: ThemeColors): Object {
       'tab.border': colors.border.default,
       'tab.hoverBackground': colors.background.default,
       'tab.inactiveBackground': colors.background.muted,
-      'tab.inactiveForeground': colors.foreground.inactive,
-      'tab.unfocusedActiveForeground': colors.foreground.muted,
-      'tab.unfocusedInactiveForeground': colors.foreground.muted,
+      'tab.inactiveForeground': colors.foreground.inactive + 77,
+      'tab.unfocusedActiveForeground': colors.foreground.muted + 99,
+      'tab.unfocusedInactiveForeground': colors.foreground.muted + 99,
       'terminal.ansiBlack': colors.rainbow.black,
       'terminal.ansiBlue': colors.rainbow.blue,
       'terminal.ansiBrightBlack': colors.rainbow.white,
@@ -241,15 +241,15 @@ export function makeGemTheme(meta: ThemeMeta, colors: ThemeColors): Object {
       'titleBar.activeBackground': colors.background.default,
       'titleBar.activeForeground': `${colors.foreground.default}cc`,
       'titleBar.inactiveBackground': colors.background.default,
-      'titleBar.inactiveForeground': colors.foreground.muted,
+      'titleBar.inactiveForeground': colors.foreground.muted + 99,
       'tree.indentGuidesStroke': `${colors.foreground.default}33`,
       'walkThrough.embeddedEditorBackground': colors.background.default,
-      'editorBracketHighlight.foreground1': colors.foreground.muted,
-      'editorBracketHighlight.foreground2': colors.foreground.muted,
-      'editorBracketHighlight.foreground3': colors.foreground.muted,
-      'editorBracketHighlight.foreground4': colors.foreground.muted,
-      'editorBracketHighlight.foreground5': colors.foreground.muted,
-      'editorBracketHighlight.foreground6': colors.foreground.muted,
+      'editorBracketHighlight.foreground1': colors.foreground.muted + 99,
+      'editorBracketHighlight.foreground2': colors.foreground.muted + 99,
+      'editorBracketHighlight.foreground3': colors.foreground.muted + 99,
+      'editorBracketHighlight.foreground4': colors.foreground.muted + 99,
+      'editorBracketHighlight.foreground5': colors.foreground.muted + 99,
+      'editorBracketHighlight.foreground6': colors.foreground.muted + 99,
     },
     tokenColors: [
       {
@@ -261,7 +261,7 @@ export function makeGemTheme(meta: ThemeMeta, colors: ThemeColors): Object {
       {
         scope: 'punctuation, constant.other.symbol',
         settings: {
-          foreground: colors.foreground.muted,
+          foreground: colors.foreground.muted + 99,
         },
       },
       {
@@ -299,7 +299,7 @@ export function makeGemTheme(meta: ThemeMeta, colors: ThemeColors): Object {
       {
         scope: 'keyword, keyword.other, modifier',
         settings: {
-          foreground: colors.foreground.muted,
+          foreground: colors.foreground.muted + 99,
         },
       },
       {
@@ -336,26 +336,26 @@ export function makeGemTheme(meta: ThemeMeta, colors: ThemeColors): Object {
       {
         scope: 'support.type, constant.other.key',
         settings: {
-          foreground: colors.foreground.muted,
+          foreground: colors.foreground.muted + 99,
         },
       },
       {
         scope: 'entity.name.type, entity.other.inherited-class, entity.other',
         settings: {
-          foreground: colors.foreground.muted,
+          foreground: colors.foreground.muted + 99,
         },
       },
       {
         scope: 'comment, punctuation.definition.comment',
         settings: {
-          foreground: `${colors.foreground.muted}`,
+          foreground: `${colors.foreground.muted + 99}`,
           fontStyle: 'italic',
         },
       },
       {
         scope: 'punctuation',
         settings: {
-          foreground: colors.foreground.muted,
+          foreground: colors.foreground.muted + 99,
         },
       },
       {
@@ -459,7 +459,7 @@ export function makeGemTheme(meta: ThemeMeta, colors: ThemeColors): Object {
       {
         scope: 'markup.heading',
         settings: {
-          foreground: colors.foreground.muted,
+          foreground: colors.foreground.muted + 99,
         },
       },
       {
@@ -550,13 +550,13 @@ export function makeGemTheme(meta: ThemeMeta, colors: ThemeColors): Object {
       {
         scope: 'keyword.other.definition.ini',
         settings: {
-          foreground: colors.foreground.muted,
+          foreground: colors.foreground.muted + 99,
         },
       },
       {
         scope: 'entity.name.section.group-title.ini',
         settings: {
-          foreground: colors.foreground.muted,
+          foreground: colors.foreground.muted + 99,
         },
       },
       {
@@ -592,7 +592,7 @@ export function makeGemTheme(meta: ThemeMeta, colors: ThemeColors): Object {
       {
         scope: 'source.cs meta.preprocessor',
         settings: {
-          foreground: colors.foreground.muted,
+          foreground: colors.foreground.muted + 99,
         },
       },
       {
@@ -610,7 +610,7 @@ export function makeGemTheme(meta: ThemeMeta, colors: ThemeColors): Object {
       {
         scope: 'support.class.component',
         settings: {
-          foreground: colors.foreground.muted,
+          foreground: colors.foreground.muted + 99,
         },
       },
       {
@@ -634,7 +634,7 @@ export function makeGemTheme(meta: ThemeMeta, colors: ThemeColors): Object {
       {
         scope: 'meta.block',
         settings: {
-          foreground: colors.foreground.muted,
+          foreground: colors.foreground.muted + 99,
         },
       },
       {
@@ -652,14 +652,14 @@ export function makeGemTheme(meta: ThemeMeta, colors: ThemeColors): Object {
       {
         scope: ['keyword.control'],
         settings: {
-          foreground: colors.foreground.muted,
+          foreground: colors.foreground.muted + 99,
           fontStyle: 'italic',
         },
       },
       {
         scope: ['keyword.operator.arithmetic'],
         settings: {
-          foreground: colors.foreground.muted,
+          foreground: colors.foreground.muted + 99,
         },
       },
       {
@@ -672,13 +672,13 @@ export function makeGemTheme(meta: ThemeMeta, colors: ThemeColors): Object {
       {
         scope: ['markup.fenced_code.block'],
         settings: {
-          foreground: colors.foreground.muted,
+          foreground: colors.foreground.muted + 99,
         },
       },
       {
         scope: ['punctuation.definition.quote'],
         settings: {
-          foreground: colors.foreground.muted,
+          foreground: colors.foreground.muted + 99,
         },
       },
       {

@@ -9,6 +9,11 @@ Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how 
 Feel free to leave me your comments, and to open issues on github if you find issues!
 
 
+## 0.1.2
+
+- Small improvements to themes & theme generator
+- Added new theme: Gold!
+
 ## 0.1.1
 
 - Fixed some details in Lavender theme

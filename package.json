@@ -29,6 +29,11 @@
         "path": "./themes/theme-amethyst.json"
       },
       {
+        "label": "Moonspell - Gold",
+        "uiTheme": "vs-dark",
+        "path": "./themes/theme-gold.json"
+      },
+      {
         "label": "Moonspell - Lavender",
         "uiTheme": "vs",
         "path": "./themes/theme-lavender.json"

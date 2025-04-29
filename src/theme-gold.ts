@@ -2,7 +2,7 @@ import { makeGemTheme } from './templates/gems'
 import { ThemeColors, ThemeMeta } from './types'
 
 const meta: ThemeMeta = {
-  name: 'Moonspell - Amethyst',
+  name: 'Moonspell - Gold',
   description:
     'A dark theme with a purple hue inspired by dark caves & purples amethysts inspired by August Themes Drawbridge',
   type: 'dark',
@@ -16,20 +16,20 @@ const colors: ThemeColors = {
     active: '#252a41',
   },
   foreground: {
-    highlight: '#c3cdfe',
-    default: '#b8cdfe',
-    muted: '#b8cdfe',
-    inactive: '#b8cdfe',
+    highlight: '#E3E4EA',
+    default: '#B6BAD0',
+    muted: '#B6BAD0',
+    inactive: '#B6BAD0',
   },
   border: {
     default: '#1b1f32',
     highlight: '#282C42',
   },
   primary: {
-    default: '#7966E6',
-    muted: '#634FD5',
-    highlight: '#9889F2',
-    foreground: '#b8cdfe',
+    default: '#D5BA4F',
+    muted: '#E6CC66',
+    highlight: '#F2DD89',
+    foreground: '#131520',
   },
   git: {
     modified: '#9889F2',

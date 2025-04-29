@@ -17,8 +17,8 @@ const colors: ThemeColors = {
   foreground: {
     highlight: '#d8dee9',
     default: '#d8dee9',
-    muted: '#d8dee999',
-    inactive: '#d8dee977',
+    muted: '#d8dee9',
+    inactive: '#d8dee9',
   },
   border: {
     default: '#252527',

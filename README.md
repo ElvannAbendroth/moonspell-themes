@@ -11,12 +11,16 @@
 ### Ruby
 ![Ruby Theme Preview](https://github.com/ElvannAbendroth/moonspell-themes/blob/main/assets/theme-ruby.png?raw=true)
 
+### Gold
+
+![Ruby Theme Preview](https://github.com/ElvannAbendroth/moonspell-themes/blob/main/assets/theme-gold.png?raw=true))
+
 ## 🪻Light Flower Themes
 
 ### Lavender
 ![Lavender Theme Preview](https://github.com/ElvannAbendroth/moonspell-themes/blob/main/assets/theme-lavender.png?raw=true)
 
-## Other Themes
+## 🌈 Other Themes
 
 ### Northern Lights
 
