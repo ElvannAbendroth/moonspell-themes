@@ -27,9 +27,9 @@ const colors: ThemeColors = {
   },
 
   primary: {
-    default: 'hsl(151, 56%, 57%)',
-    muted: 'hsl(151, 62%, 53%)',
-    highlight: 'hsl(151, 56%, 69%)',
+    default: 'hsl(163, 83%, 38%)',
+    muted: 'hsl(163, 92%, 29%)',
+    highlight: 'hsl(163, 64%, 62%)',
     foreground: 'rgb(7, 24, 29)',
   },
   git: {

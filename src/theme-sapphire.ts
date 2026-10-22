@@ -25,10 +25,10 @@ const colors: ThemeColors = {
     highlight: '#282C42',
   },
   primary: {
-    default: 'hsl(227, 99%, 73%)',
-    muted: 'hsl(227, 61%, 62%)',
-    highlight: 'hsl(227, 80%, 74%)',
-    foreground: '#0F111A',
+    default: 'hsl(227, 73%, 52%)',
+    muted: 'hsl(227, 71%, 44%)',
+    highlight: 'hsl(227, 81%, 67%)',
+    foreground: '#b8cdfe',
   },
   git: {
     modified: '#9889F2',

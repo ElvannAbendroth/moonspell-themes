@@ -6,8 +6,14 @@ Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how 
 
 > The theme collection is currently in beta!  I'll be improving the existing themes over the course of the next couple of days/weeks (depending how much time I end up spending of it)
 
-Feel free to leave me your comments, and to open issues on github if you find issues!
+Feel free to leave me your comments, and to open issues on github!
 
+
+## 0.1.3
+
+- Refined gem theme colors and link accents.
+- Minor fixes to gem templates for better contrast and readability.
+- Added new themes: Pink Topaz, Emerald, Sapphire & Fluorite
 
 ## 0.1.2
 

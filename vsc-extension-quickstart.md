@@ -26,3 +26,25 @@ To learn more about scopes and how they're used, check out the [color theme](htt
 
 * To start using your extension with Visual Studio Code copy it into the `<user home>/.vscode/extensions` folder and restart Code.
 * To share your extension with the world, read on https://code.visualstudio.com/docs about publishing an extension.
+
+
+## Docs
+
+
+### Authoring Colors
+
+Theme palettes in `src/theme-*.ts` accept hex, HSL, and RGB colors:
+
+```ts
+primary: {
+	default: 'hsl(151, 72%, 65%)',
+	muted: 'hsl(151 62% 57%)',
+	highlight: '#8fe8b9',
+	foreground: 'rgb(184, 236, 254)',
+},
+```
+
+All templates convert HSL and RGB palette values to hex before applying
+transparency and generating JSON. Existing hex values are preserved, and the
+source palette is not modified. Use opaque colors for palette entries where
+templates append their own opacity suffixes.
