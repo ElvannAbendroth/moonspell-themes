@@ -29,8 +29,8 @@ Generation errors are logged but currently do not set a failing exit code. Look 
    | New features | `npm version minor --no-git-tag-version` |
    | Major changes | `npm version major --no-git-tag-version` |
 
-4. Commit the changed files. Include the matching keyword in your commit message, for example `Fix theme colors #patch`. When squash-merging, include it in the final squash commit message.
-5. Push or merge to `main`. GitHub packages and publishes automatically using its `VSCE_TOKEN` secret, then attempts to create a Git tag.
+4. Commit the changed files. Add `#release` to activate publishing and the matching bump keyword for Git tagging, for example `Fix theme colors #release #patch`. These must be in the latest commit message pushed to `main`, or the final merge/squash commit message.
+5. Push or merge to `main`. With `#release`, GitHub packages and publishes using its `VSCE_TOKEN` secret, then attempts to create a Git tag. Without `#release`, both jobs are skipped.
 6. Check the **Publish** step in [GitHub Actions](https://github.com/ElvannAbendroth/moonspell-themes/actions), then the version in the [Marketplace dashboard](https://marketplace.visualstudio.com/manage/publishers/oodri/extensions/moonspell-themes/hub).
 
 ## Your tagging keywords
@@ -39,6 +39,7 @@ These go in **commit messages**, not in manually created Git tags.
 
 | Keyword | Git tag result, assuming the previous tag is `0.1.4` |
 | --- | --- |
+| `#release` | Enables Marketplace publishing; does not bump a Git tag by itself. |
 | `#patch` | `0.1.5` |
 | `#minor` | `0.2.0` |
 | `#major` | `1.0.0` |
@@ -46,9 +47,9 @@ These go in **commit messages**, not in manually created Git tags.
 
 **Tags do not set the Marketplace version.** Publishing runs before tagging and uses `package.json`. Use both the version command and the matching keyword if you want them aligned; that assumes the previous Git tag and package version already match.
 
-**`#none` does not prevent publishing.** Every push to `main` attempts publishing. An existing Marketplace version is skipped by `--skip-duplicate`, so unchanged versions do not upload new content, even README edits.
+**Only `#release` activates publishing.** `#patch`, `#minor`, or `#major` alone do not. `#release #none` publishes without a Git tag bump. An existing Marketplace version is still skipped by `--skip-duplicate`, so bump the package version even for README-only releases.
 
-Pushing a Git tag alone does not trigger this workflow. Pushes to other branches do not trigger it either, but closing a PR targeting `main` does, even without merging. A merge can trigger two runs.
+Only pushes to `main` trigger this workflow. Pushing a Git tag or closing an unmerged PR does not. For a multi-commit push, the release switch checks only the latest commit message, not earlier commits.
 
 Tagging caveat: the tag job currently uses the retired `ubuntu-20.04` runner. It may fail independently after a successful publish. These keywords describe the action's rules, not a guarantee that the current tag job succeeds.
 
