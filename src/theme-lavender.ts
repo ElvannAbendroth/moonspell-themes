@@ -10,13 +10,13 @@ const meta: ThemeMeta = {
 
 const colors: ThemeColors = {
   background: {
-    muted: '#eef0f5',
-    default: '#eff1f5',
     highlight: '#e6e9ef',
+    default: '#eff1f5',
+    muted: '#eef0f5',
     active: '#dce0e8',
   },
   foreground: {
-    highlight: '#403A56',
+    highlight: '#2C2641',
     default: '#403A56',
     muted: '#726b8a',
     inactive: '#948daa',
