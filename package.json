@@ -17,7 +17,7 @@
     "Themes"
   ],
   "scripts": {
-    "build": "vsce package -o ./.build",
+    "build": "vsce package -o ./moonspell-themes.vsix",
     "publish": "vsce publish --skip-duplicate",
     "dev": "nodemon --watch themes --watch src --ext ts --exec \"ts-node ./index.ts\""
   },
@@ -74,13 +74,12 @@
     "@types/node": "^22.12.0",
     "@typescript-eslint/eslint-plugin": "^8.22.0",
     "@typescript-eslint/parser": "^8.22.0",
+    "colord": "^2.10.0",
     "eslint": "^9.19.0",
     "nodemon": "^3.1.14",
     "ts-node": "^10.9.2",
-    "vsce": "^2.15.0",
-    "colord": "^2.10.0"
+    "vsce": "^2.15.0"
   },
-  "dependencies": {},
   "cspell": {
     "version": "0.2",
     "ignorePaths": [],

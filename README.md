@@ -4,6 +4,23 @@
 
 Run `npm run dev` to regenerate themes as you edit the TypeScript files.
 
+## Publishing
+
+`npm run publish` automatically authenticates with the `VSCE_PAT` environment variable. No separate login command is needed.
+
+To set the token for your current Bash session without displaying it or saving it in shell history:
+
+```bash
+read -rsp "Marketplace token: " VSCE_PAT
+printf '\n'
+export VSCE_PAT
+npm run publish
+```
+
+Subsequent publishes in the same session only need `npm run publish`. For CI, inject `VSCE_PAT` from your CI secret store before running that command. The token needs the Marketplace (Manage) scope and permission to publish for `oodri`.
+
+A local `.env` file is not loaded automatically; the variable must be exported into the publishing process's environment. Never commit your token. Run `unset VSCE_PAT` when you no longer need it in the session.
+
 ## 💎 Gem Themes
 
 ### Amethyst
