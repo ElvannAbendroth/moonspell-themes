@@ -9,7 +9,7 @@ Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how 
 Feel free to leave me your comments, and to open issues on github!
 
 
-## 0.1.3
+## 0.1.3 & 0.1.4
 
 - Refined gem theme colors and link accents.
 - Minor fixes to gem templates for better contrast and readability.
