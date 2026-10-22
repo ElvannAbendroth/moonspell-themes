@@ -30,7 +30,7 @@ const colors: ThemeColors = {
     default: 'hsl(151, 72%, 65%)',
     muted: 'hsl(151, 62%, 57%)',
     highlight: 'hsl(151, 80%, 74%)',
-    foreground: 'rgb(184, 236, 254)',
+    foreground: 'rgb(7, 24, 29)',
   },
   git: {
     modified: '#9889F2',

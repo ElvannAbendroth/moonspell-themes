@@ -24,16 +24,6 @@
   "contributes": {
     "themes": [
       {
-        "label": "Moonspell - Amethyst",
-        "uiTheme": "vs-dark",
-        "path": "./themes/theme-amethyst.json"
-      },
-      {
-        "label": "Moonspell - Sapphire",
-        "uiTheme": "vs-dark",
-        "path": "./themes/theme-sapphire.json"
-      },
-      {
         "label": "Moonspell - Emerald",
         "uiTheme": "vs-dark",
         "path": "./themes/theme-emerald.json"
@@ -44,9 +34,9 @@
         "path": "./themes/theme-gold.json"
       },
       {
-        "label": "Moonspell - Ruby",
-        "uiTheme": "vs-dark",
-        "path": "./themes/theme-ruby.json"
+        "label": "Moonspell - Lavender",
+        "uiTheme": "vs",
+        "path": "./themes/theme-lavender.json"
       },
       {
         "label": "Moonspell - Northern Lights",
@@ -54,9 +44,14 @@
         "path": "./themes/theme-northern-lights.json"
       },
       {
-        "label": "Moonspell - Lavender",
-        "uiTheme": "vs",
-        "path": "./themes/theme-lavender.json"
+        "label": "Moonspell - Ruby",
+        "uiTheme": "vs-dark",
+        "path": "./themes/theme-ruby.json"
+      },
+      {
+        "label": "Moonspell - Sapphire",
+        "uiTheme": "vs-dark",
+        "path": "./themes/theme-sapphire.json"
       }
     ]
   },
@@ -65,9 +60,10 @@
     "@typescript-eslint/eslint-plugin": "^8.22.0",
     "@typescript-eslint/parser": "^8.22.0",
     "eslint": "^9.19.0",
+    "nodemon": "^3.1.14",
     "ts-node": "^10.9.2",
     "vsce": "^2.15.0",
-    "nodemon": "^3.1.14"
+    "colord": "^2.10.0"
   },
   "dependencies": {},
   "cspell": {

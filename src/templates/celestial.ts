@@ -1,6 +1,9 @@
+import { normalizeThemeColors } from '../colors'
 import { ThemeColors, ThemeMeta } from '../types'
 
 export function makeCelestialTheme(meta: ThemeMeta, colors: ThemeColors): Object {
+  colors = normalizeThemeColors(colors)
+
   return {
     name: meta.name,
     type: meta.type,
