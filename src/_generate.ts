@@ -26,7 +26,9 @@ async function deleteOrphanedJsonFiles() {
   const srcFiles = await readdirAsync(srcDir)
 
   const tsFiles = new Set(
-    srcFiles.filter(file => file.startsWith('theme-') && file.endsWith('.ts')).map(file => file.replace('.ts', '.json'))
+    srcFiles
+      .filter(file => file.startsWith('theme-') && file.endsWith('.ts'))
+      .map(file => file.replace('.ts', '.json')),
   )
 
   for (const file of themeFiles) {
