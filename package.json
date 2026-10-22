@@ -18,6 +18,7 @@
   ],
   "scripts": {
     "build": "vsce package -o ./moonspell-themes.vsix",
+    "generate": "npx --no-install ts-node ./index.ts",
     "publish": "vsce publish --skip-duplicate",
     "dev": "nodemon --watch themes --watch src --ext ts --exec \"ts-node ./index.ts\""
   },
