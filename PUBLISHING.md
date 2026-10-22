@@ -2,10 +2,25 @@
 
 **Use GitHub for normal releases. You do not need to build or publish locally.**
 
+## Current scripts
+
+| Command | What it does |
+| --- | --- |
+| `npm run generate` | Generates all theme JSON files once and updates the theme list in `package.json`. |
+| `npm run dev` | Generates themes on startup and again when watched TypeScript files change. |
+| `npm run build` | Creates `moonspell-themes.vsix`, which is necessary for the Marketplace publishing.  Do not run this locally, this is included in the Github action |
+| `npm run publish` | Packages and publishes files to the Marketplace.  Do not use this locally, this is meant to be run during the GitHub Action. Does not generate themes or bump the version. |
+
+Run `npm install` first if dependencies are not installed.
+
+`generate` runs every top-level `src/theme-*.ts` file and writes its JSON output to the matching `themes/theme-*.json` file. This covers all nine current themes. It then deletes JSON files with no matching source and refreshes `package.json`'s theme registrations. New themes must follow the same filename pattern and print JSON to stdout.
+
+Generation errors are logged but currently do not set a failing exit code. Look for `package.json updated successfully with themes.` and stop if any errors appear.
+
 ## Step by step
 
 1. Make your theme or README changes.
-2. If theme code changed, run `npx --no-install ts-node ./index.ts` with dependencies installed. Stop if it reports errors. Commit the generated `themes/` files too; CI does not generate them.
+2. If theme code changed, run `npm run generate`. Stop if it reports errors. Commit the generated `themes/` files too; CI does not generate them.
 3. Bump the Marketplace version using one command below. This updates `package.json` and the lockfile without creating a commit or Git tag.
 
    | Release | Command |
