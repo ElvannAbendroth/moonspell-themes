@@ -2,8 +2,8 @@ import { makeGemTheme } from './templates/gems'
 import { ThemeColors, ThemeMeta } from './types'
 
 const meta: ThemeMeta = {
-  name: 'Moonspell - Emerald 2',
-  description: 'A dark theme with green accents hue inspired by dark forests and inspired by August Themes Drawbridge',
+  name: 'Moonspell - Pink Topaz',
+  description: 'A dark theme with a pink accent inspired by saturate pink topaz and by August Themes Drawbridge',
   type: 'dark',
 }
 
@@ -20,21 +20,19 @@ const colors: ThemeColors = {
     muted: '#b8cdfe',
     inactive: '#b8cdfe',
   },
-
   border: {
     default: '#1b1f32',
     highlight: '#282C42',
   },
-
   primary: {
-    default: 'hsl(172, 72%, 65%)',
-    muted: 'hsl(172, 62%, 57%)',
-    highlight: 'hsl(172, 80%, 74%)',
-    foreground: 'rgb(7, 24, 29)',
+    default: 'hsl(293, 79%, 71%)',
+    muted: 'hsl(293, 66%, 63%)',
+    highlight: 'hsl(293, 69%, 80%)',
+    foreground: '#0F111A',
   },
   git: {
     modified: '#9889F2',
-    untracked: 'hsl(172, 72%, 50%)',
+    untracked: '#24dbc3',
     added: '#67c9e4',
     ignored: '#b8cdfe55',
     error: '#ea96f2',

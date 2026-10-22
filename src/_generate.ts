@@ -17,6 +17,7 @@ async function generateTheme(scriptPath: string, outputPath: string) {
     console.log(`🌈 Generated theme: ${outputPath}`)
   } catch (error) {
     console.error(`🔴 Error generating theme: ${outputPath}`, error)
+    throw error
   }
 }
 

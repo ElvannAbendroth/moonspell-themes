@@ -25,8 +25,8 @@ const colors: ThemeColors = {
     highlight: '#2f2f32',
   },
   primary: {
-    default: '#ce294a',
-    muted: '#a31c37',
+    default: '#a31c37',
+    muted: '#8d152d',
     highlight: '#e4758b',
     foreground: '#d8dee9',
   },

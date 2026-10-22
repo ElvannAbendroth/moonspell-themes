@@ -24,12 +24,11 @@ const colors: ThemeColors = {
     default: '#1b1f32',
     highlight: '#282C42',
   },
-
   primary: {
-    default: 'hsl(227, 72%, 65%)',
-    muted: 'hsl(227, 62%, 57%)',
+    default: 'hsl(227, 99%, 73%)',
+    muted: 'hsl(227, 61%, 62%)',
     highlight: 'hsl(227, 80%, 74%)',
-    foreground: 'rgb(184, 205, 254)',
+    foreground: '#0F111A',
   },
   git: {
     modified: '#9889F2',

@@ -24,14 +24,19 @@
   "contributes": {
     "themes": [
       {
-        "label": "Moonspell - Emerald 2",
+        "label": "Moonspell - Amethyst",
         "uiTheme": "vs-dark",
-        "path": "./themes/theme-emerald-2.json"
+        "path": "./themes/theme-amethyst.json"
       },
       {
         "label": "Moonspell - Emerald",
         "uiTheme": "vs-dark",
         "path": "./themes/theme-emerald.json"
+      },
+      {
+        "label": "Moonspell - Fluorite",
+        "uiTheme": "vs-dark",
+        "path": "./themes/theme-fluorite.json"
       },
       {
         "label": "Moonspell - Gold",
@@ -47,6 +52,11 @@
         "label": "Moonspell - Northern Lights",
         "uiTheme": "vs-dark",
         "path": "./themes/theme-northern-lights.json"
+      },
+      {
+        "label": "Moonspell - Pink Topaz",
+        "uiTheme": "vs-dark",
+        "path": "./themes/theme-pink-topaz.json"
       },
       {
         "label": "Moonspell - Ruby",
