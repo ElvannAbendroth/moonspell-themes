@@ -15,10 +15,10 @@ const colors: ThemeColors = {
     active: '#252a41',
   },
   foreground: {
-    highlight: 'hsl(184, 97%, 88%)',
-    default: 'hsl(184, 97%, 86%)',
-    muted: 'hsl(184, 97%, 86%)',
-    inactive: 'hsl(184, 97%, 86%)',
+    highlight: '#c3cdfe',
+    default: '#b8cdfe',
+    muted: '#b8cdfe',
+    inactive: '#b8cdfe',
   },
 
   border: {

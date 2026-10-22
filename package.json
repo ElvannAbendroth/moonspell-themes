@@ -24,6 +24,11 @@
   "contributes": {
     "themes": [
       {
+        "label": "Moonspell - Emerald 2",
+        "uiTheme": "vs-dark",
+        "path": "./themes/theme-emerald-2.json"
+      },
+      {
         "label": "Moonspell - Emerald",
         "uiTheme": "vs-dark",
         "path": "./themes/theme-emerald.json"
